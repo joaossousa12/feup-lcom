@@ -1,11 +1,14 @@
 #include <lcom/lcf.h>
-
 #include <lcom/lab3.h>
 
 #include <stdbool.h>
 #include <stdint.h>
+
 #include "i8042.h"
+#include "i8254.h"
 #include "keyboard.h"
+#include "KBC.c"
+#include "timer.c"
 
 
 

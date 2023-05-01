@@ -14,3 +14,4 @@ LDADD += -llcf
 
 # include LCOM's makefile that does all the "heavy lifting"
 .include <minix.lcom.mk>
+

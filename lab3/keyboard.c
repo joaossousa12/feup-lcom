@@ -1,12 +1,12 @@
 #include "keyboard.h"
-#include "KBC.h"
+
 int keyboard_hook_id = 1;
 uint8_t scancode = 0;
 int counter_KBC = 0;
 
 int (keyboard_subscribe_interrupts)(uint8_t *bit_no){
   if(bit_no == NULL) return 1;
-  bit_no = BIT(keyboard_hook_id);
+  *bit_no = BIT(keyboard_hook_id);
   return sys_irqsetpolicy(IRQ_KEYBOARD, IRQ_REENABLE | IRQ_EXCLUSIVE, &keyboard_hook_id);
 }
 

@@ -2,10 +2,6 @@
 
 #include <stdint.h>
 
-#ifdef LAB3
-uint32_t counter_KBC = 0;
-#endif
-
 int(util_get_LSB)(uint16_t val, uint8_t *lsb) {
   /* To be implemented by the students */
   if(lsb == NULL){
