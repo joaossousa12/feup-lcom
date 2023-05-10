@@ -1,6 +1,14 @@
 #include <lcom/lcf.h>
 #include <stdint.h>
-#include <stdio.h>  
+#include <stdio.h>
+
+#include "devices/video/video.c"
+#include "devices/video/VBE.h"
+#include "devices/keyboard/keyboard.h"
+#include "devices/keyboard/18042.h"
+#include "devices/mouse/mouse.c"
+
+
 
 int main(int argc, char *argv[]){
     lcf_set_language("EN-US");
@@ -13,5 +21,10 @@ int main(int argc, char *argv[]){
 
     lcf_cleanup();
 
+    return 0;
+}
+
+int (proj_main_loop)(int argc, char **argv){
+    /* your main loop code here */
     return 0;
 }
