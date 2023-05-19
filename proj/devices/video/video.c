@@ -59,10 +59,35 @@ int (draw_line)(uint16_t x, uint16_t y, uint16_t len, uint32_t color, uint8_t* f
     return 0;
 }
 
+int (draw_vertical_line)(uint16_t x, uint16_t y, uint16_t len, uint32_t color, uint8_t* frame_buffer) {
+    for (unsigned i = 0 ; i < len ; i++)
+        if (draw_pixel(x, y + i, color, frame_buffer) != 0) return 1;
+    return 0;
+}
+
 int (draw_rectangle)(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t color, uint8_t* frame_buffer) {
     for(unsigned i = 0; i < height ; i++)
         if (draw_line(x, y+i, width, color, frame_buffer) != 0) {
             continue;
         }
     return 0;
+}
+
+int (draw_circle)(uint16_t x, uint16_t y, uint16_t row, uint16_t col, uint32_t color, uint8_t* frame_buffer){
+    if(frame_buffer == NULL) return 1;
+
+    for(int i = 0; i < row; i++){
+        for(int j = 0; j < col; j++){
+            if(((j == 0) || (j == col -1)) && ((i != 0) && (i != row -1))){
+                draw_pixel(x + i, y + j, color, frame_buffer);
+            }
+            else if (((i == 0) || (j == row -1)) && ((j > 0) && (j < col -1)))
+            {
+                draw_pixel(x + i, y + j, color, frame_buffer);
+            }else{
+                //print space?
+            }
+        }
+        //change the iteration print endl
+    }
 }
