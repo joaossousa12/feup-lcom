@@ -1,0 +1,10 @@
+static char * uprightcorner[] = {
+"8 6 2 2",
+"G c #00FF00",
+"B c #000000",
+"BBBBBBBB",
+"GGGGGGGB",
+"GGGGGGGB",
+"GGGGGGGB",
+"GGGGGGGB",
+"GGGGGGGB"};
