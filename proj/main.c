@@ -37,10 +37,11 @@ int main(int argc, char *argv[]){
 }
 
 int process_interruptions(){
-    if(mouse_config(0xEA)) return 1; // enable stream mode
-    if(mouse_config(0xF4)) return 1; // enable data report
 
     if(timer_set_frequency(0,30)) return 1;
+
+    if(mouse_config(0xEA)) return 1; // enable stream mode
+    if(mouse_config(0xF4)) return 1; // enable data report
 
     int ipc_status;
     uint8_t irq_kb, irq_mouse, irq_timer;
@@ -75,18 +76,18 @@ int process_interruptions(){
                     if(msg.m_notify.interrupts & irq_mouse){
                         mouse_ih();
                         mouse_sync();
-                        if(gameMode == GAME_MODE) {process_MOUSE()}
+                        if(gameMode == GAME_MODE) {
+                            if(mousePacket.lb)
+                                process_tacada_MOUSE ( x , y );
+                        }
                     }
-            }
                 }
-            }
-
-
-
-
-
+        }
+    }
+    return 0;
 }
 
 int(proj_main_loop)(int argc, char *argv[]){
-    
+    if(process_interruptions()) return 1;
+    return 0;
 }
