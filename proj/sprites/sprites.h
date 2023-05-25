@@ -2,7 +2,8 @@
 #define SPRITES_H
 
 #include "../devices/video/video.h"
-#include "../imgs/title.xpm"
+#include "../devices/video/VBE.h"
+#include "../imgs/InitialMenu.xpm"
 
 
 
@@ -11,7 +12,7 @@ typedef struct Sprite{
     uint16_t height, width;
 } Sprite;
 
-Sprite *gameTitle;
+Sprite *InitialMenu;
 
 Sprite *createSprite(xpm_map_t sprite);
 
