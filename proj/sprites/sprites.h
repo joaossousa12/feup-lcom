@@ -1,8 +1,8 @@
 #ifndef SPRITES_H
 #define SPRITES_H
 
-#include "../devices/video/video.c"
-#include "../images/title.xpm"
+#include "../devices/video/video.h"
+#include "../imgs/title.xpm"
 
 
 
@@ -24,3 +24,4 @@ void loadSprites();
 void unloadSprites();
 
 #endif
+

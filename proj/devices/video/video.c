@@ -1,6 +1,4 @@
-#include <lcom/lcf.h>
-#include <math.h>
-#include "VBE.h"
+#include "video.h"
 
 vbe_mode_info_t mode_info;
 
