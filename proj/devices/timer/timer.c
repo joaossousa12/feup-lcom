@@ -1,11 +1,9 @@
 #include <lcom/lcf.h>
 #include <lcom/timer.h>
-#include <utils.c>
+#include "../utils.c"
 
 #include <stdint.h>
 #include "i8254.h"
-
-#define BIT(N)  (1<<N)
 
 int timer=0;
 int counter=0;

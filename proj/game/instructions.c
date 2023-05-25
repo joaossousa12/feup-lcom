@@ -3,9 +3,14 @@
 //
 
 #include "instructions.h"
-#include "../../MACROS.h"
+#include "../MACROS.h"
 
 extern int gameMode;
+
+int drawInstructionsPage(){
+    copyDrawingToBuffer();
+    return 0;
+}
 
 void process_keyboard(uint8_t scancode){
     switch (scancode) {
@@ -18,7 +23,4 @@ void process_keyboard(uint8_t scancode){
     }
 }
 
-int drawInstructionsPage(){
-    copyDrawingToBuffer();
-    return 0;
-}
+
