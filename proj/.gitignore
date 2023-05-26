@@ -6,3 +6,5 @@ a.exe
 *.o
 output.txt
 trace.txt
+.gdbinit
+proj

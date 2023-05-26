@@ -11,7 +11,7 @@ Sprite *createSprite(xpm_map_t xpmMap){
     if(sprite == NULL) return NULL;
 
     xpm_image_t image;
-    sprite->colors = (uint32_t *) xpm_load(xpmMap, XPM_8_8_8, &image);
+    sprite->colors = (uint32_t *) xpm_load(xpmMap, XPM_8_8_8_8, &image);
     sprite->height = image.height;
     sprite->width = image.width;
 
