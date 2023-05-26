@@ -3,13 +3,14 @@
 //
 
 #include "instructions.h"
-#include "../MACROS.h"
-#include "../devices/keyboard/i8042.h"
 
 extern int gameMode;
+extern uint8_t *frame_buffer;
+extern vbe_mode_info_t mode_info;
 
 int drawInstructionsPage(){
-    //copyDrawingToBuffer();
+    memset(frame_buffer, 0xDDDDDD, mode_info.XResolution * mode_info.YResolution * ((mode_info.BitsPerPixel + 7) / 8));
+    drawSprite(instructionsFIrst, 0, 0);
     return 0;
 }
 

@@ -4,6 +4,10 @@
 #include "../devices/video/video.h"
 #include "../devices/video/VBE.h"
 #include "../imgs/InitialMenu.xpm"
+#include "../imgs/instructionsFIrst.xpm"
+#include "../imgs/middle.xpm"
+#include "../imgs/border.xpm"
+
 
 typedef struct Sprite{
     uint32_t *colors;
@@ -11,6 +15,9 @@ typedef struct Sprite{
 } Sprite;
 
 Sprite *InitialMenu;
+Sprite *instructionsFIrst;
+Sprite *middle;
+Sprite *border;
 
 Sprite *createSprite(xpm_map_t xpmMap);
 

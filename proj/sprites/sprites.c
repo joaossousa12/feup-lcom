@@ -44,8 +44,14 @@ int drawSprite(Sprite *sprite, int x, int y){
 
 void loadSprites(){
   InitialMenu = createSprite((xpm_map_t) InitialMenu_xpm);
+  instructionsFIrst = createSprite((xpm_map_t) instructionsFIrst_xpm);
+  border = createSprite((xpm_map_t) border_xpm);
+  middle = createSprite((xpm_map_t) middle_xpm);
 }
 
 void unloadSprites(){
   destroy_sprite(InitialMenu);
+  destroy_sprite(instructionsFIrst);
+  destroy_sprite(border);
+  destroy_sprite(middle);
 }

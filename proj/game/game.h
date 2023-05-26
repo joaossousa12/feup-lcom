@@ -9,7 +9,7 @@
 #include "../sprites/sprites.h"
 #include "../devices/mouse/mouse.h"
 
-void drawGame();
+int drawGame();
 
 void process_keyboard_game(uint8_t scancode);
 
