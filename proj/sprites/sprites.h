@@ -7,6 +7,9 @@
 #include "../imgs/instructionsFIrst.xpm"
 #include "../imgs/middle.xpm"
 #include "../imgs/border.xpm"
+#include "../imgs/obstacle.xpm"
+#include "../imgs/hole.xpm"
+#include "../imgs/ball.xpm"
 
 
 typedef struct Sprite{
@@ -18,6 +21,9 @@ Sprite *InitialMenu;
 Sprite *instructionsFIrst;
 Sprite *middle;
 Sprite *border;
+Sprite *obstacle;
+Sprite *hole;
+Sprite *ball;
 
 Sprite *createSprite(xpm_map_t xpmMap);
 

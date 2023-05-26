@@ -47,6 +47,9 @@ void loadSprites(){
   instructionsFIrst = createSprite((xpm_map_t) instructionsFIrst_xpm);
   border = createSprite((xpm_map_t) border_xpm);
   middle = createSprite((xpm_map_t) middle_xpm);
+  obstacle = createSprite((xpm_map_t) obstacle_xpm);
+  hole = createSprite((xpm_map_t) hole_xpm);
+  ball = createSprite((xpm_map_t) ball_xpm);
 }
 
 void unloadSprites(){
@@ -54,4 +57,7 @@ void unloadSprites(){
   destroy_sprite(instructionsFIrst);
   destroy_sprite(border);
   destroy_sprite(middle);
+  destroy_sprite(obstacle);
+  destroy_sprite(hole);
+  destroy_sprite(ball);
 }
