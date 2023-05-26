@@ -34,7 +34,7 @@ bool running = true;
 int main(int argc, char *argv[]){
     lcf_set_language("EN-US");
 
-    lcf_trace_calls("home/lcom/labs/g4/proj/trace.txt");
+    lcf_trace_calls("/home/lcom/labs/g4/proj/trace.txt");
 
     lcf_log_output("/home/lcom/labs/g4/proj/output.txt");
 
@@ -100,6 +100,8 @@ int process_interruptions(){
 }
 
 int (proj_main_loop)(int argc, char *argv[]){
+    if(set_frame_buffer(0x115)) return 1;
+    if(set_graphic_mode(0x115)) return 1;
     loadSprites();
     if(process_interruptions()) return 1;
     unloadSprites();

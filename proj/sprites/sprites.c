@@ -4,9 +4,6 @@
 extern int gameMode;
 extern int x;
 extern int y;
-extern uint8_t *imageBuffer;
-extern uint16_t xRes, yRes;
-extern unsigned BytesPerPixel;
 extern char word[24];
 
 Sprite *createSprite(xpm_map_t xpmMap){
