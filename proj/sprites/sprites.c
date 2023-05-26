@@ -14,12 +14,12 @@ Sprite *createSprite(xpm_map_t xpmMap){
     if(sprite == NULL) return NULL;
 
     xpm_image_t image;
-    sprite->colors = (uint32_t *) xpm_load(xpmMap, XPM_8_8_8, &image); // falta definir funºão xpm_load e macro XPM888
+    sprite->colors = (uint32_t *) xpm_load(xpmMap, XPM_8_8_8, &image);
     sprite->height = image.height;
     sprite->width = image.width;
 
     if(sprite->colors == NULL){
-        free(sprite); //TODO
+        free(sprite);
         return NULL;
     }
 
@@ -46,9 +46,9 @@ int drawSprite(Sprite *sprite, int x, int y){
 }
 
 void loadSprites(){
-  gameTitle = createSprite((xpm_map_t) title_xpm);
+  InitialMenu = createSprite((xpm_map_t) InitialMenu_xpm);
 }
 
 void unloadSprites(){
-  destroy_sprite(gameTitle);
+  destroy_sprite(InitialMenu);
 }
