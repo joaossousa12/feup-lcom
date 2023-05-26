@@ -1,10 +1,8 @@
-// IMPORTANT: you must include the following line in all your C files
 #include "mouse.h"
 
 #define IRQ_MOUSE 12
 
-// Any header files included below this line should have been created by you
-int hook_id_mouse=0;
+int hook_id_mouse=6;
 struct packet mouse_packet;
 
 uint8_t byte; //byte mais recente
@@ -18,6 +16,8 @@ uint16_t delta_x;
 uint16_t delta_y;
 
 int current_index = 0;
+int x = 0;
+int y = 0;
 
 
 int (mouse_subscribe_int)(uint8_t *bit_no){

@@ -11,7 +11,7 @@
 #include "../devices/video/video.h"
 #include "../sprites/sprites.h"
 
-void drawInstructionsPage();
+int drawInstructionsPage();
 
 
 void process_keyboard_instructions(uint8_t scancode);

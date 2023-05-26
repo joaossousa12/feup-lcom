@@ -1,6 +1,5 @@
-/* XPM */
 static char * upleftcorner[] = {
-"8 6 2 1",
+"8 6 2 2",
 "G c #00FF00",
 "B c #000000",
 "BBBBBBBB",
@@ -8,5 +7,4 @@ static char * upleftcorner[] = {
 "BGGGGGGG",
 "BGGGGGGG",
 "BGGGGGGG",
-"BGGGGGGG"
-};
+"BGGGGGGG"};

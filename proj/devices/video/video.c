@@ -1,6 +1,7 @@
 #include "video.h"
 
 vbe_mode_info_t mode_info;
+uint8_t *frame_buffer;
 
 int (set_graphic_mode)(uint16_t submode) {
     reg86_t reg86;
@@ -15,7 +16,7 @@ int (set_graphic_mode)(uint16_t submode) {
     return 0;
 }
 
-int (set_frame_buffer)(uint16_t mode, uint8_t** frame_buffer) {
+int (set_frame_buffer)(uint16_t mode) {
 
     memset(&mode_info, 0, sizeof(mode_info));
     if(vbe_get_mode_info(mode, &mode_info)) return 1;
@@ -30,7 +31,7 @@ int (set_frame_buffer)(uint16_t mode, uint8_t** frame_buffer) {
         return 1;
     }
 
-    *frame_buffer = vm_map_phys(SELF, (void*) physic_addresses.mr_base, frame_size);
+    frame_buffer = vm_map_phys(SELF, (void*) physic_addresses.mr_base, frame_size);
     if (frame_buffer == NULL) {
         return 1;
     }
@@ -38,7 +39,7 @@ int (set_frame_buffer)(uint16_t mode, uint8_t** frame_buffer) {
     return 0;
 }
 
-int (draw_pixel)(uint16_t x, uint16_t y, uint32_t color, uint8_t* frame_buffer) {
+int (draw_pixel)(uint16_t x, uint16_t y, uint32_t color) {
 
     if(x >= mode_info.XResolution || y >= mode_info.YResolution) return 1;
 
@@ -51,15 +52,15 @@ int (draw_pixel)(uint16_t x, uint16_t y, uint32_t color, uint8_t* frame_buffer) 
     return 0;
 }
 
-int (draw_line)(uint16_t x, uint16_t y, uint16_t len, uint32_t color, uint8_t* frame_buffer) {
+int (draw_line)(uint16_t x, uint16_t y, uint16_t len, uint32_t color) {
     for (unsigned i = 0 ; i < len ; i++)
-        if (draw_pixel(x+i, y, color, frame_buffer) != 0) return 1;
+        if (draw_pixel(x+i, y, color) != 0) return 1;
     return 0;
 }
 
-int (draw_rectangle)(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t color, uint8_t* frame_buffer) {
+int (draw_rectangle)(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t color) {
     for(unsigned i = 0; i < height ; i++)
-        if (draw_line(x, y+i, width, color, frame_buffer) != 0) {
+        if (draw_line(x, y+i, width, color) != 0) {
             continue;
         }
     return 0;

@@ -1,6 +1,5 @@
-/* XPM */
 static char * upmiddle[] = {
-"8 6 2 1",
+"8 6 1 2",
 "G c #00FF00",
 "B c #000000",
 "BBBBBBBB",
@@ -8,5 +7,4 @@ static char * upmiddle[] = {
 "GGGGGGGG",
 "GGGGGGGG",
 "GGGGGGGG",
-"GGGGGGGG"
-};
+"GGGGGGGG"};

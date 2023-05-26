@@ -1,4 +1,4 @@
-    #include <lcom/lcf.h>
+#include <lcom/lcf.h>
 #include <stdint.h>
 #include <stdio.h>
 #include "game/instructions.h"
@@ -6,6 +6,7 @@
 #include "game/menu.h"
 #include "devices/keyboard/keyboard.h"
 #include "devices/keyboard/KBC.h"
+#include "devices/mouse/KBC_mouse.h"
 #include "devices/timer/timer.h"
 #include "devices/mouse/mouse.h"
 #include "devices/video/VBE.h"
@@ -33,9 +34,9 @@ bool running = true;
 int main(int argc, char *argv[]){
     lcf_set_language("EN-US");
 
-    lcf_trace_calls("home/lcom/labs/g4/proj/src/output/trace.txt");
+    lcf_trace_calls("home/lcom/labs/g4/proj/trace.txt");
 
-    lcf_log_output("/home/lcom/labs/g4/proj/src/output/output.txt");
+    lcf_log_output("/home/lcom/labs/g4/proj/output.txt");
 
     if (lcf_start(argc, argv)) return 1;
 
@@ -92,11 +93,16 @@ int process_interruptions(){
             }
         }
     }
+    if(timer_unsubscribe_int()) return 1;
+    if(keyboard_unsubscribe_interrupts()) return 1;
+    if(mouse_unsubscribe_int()) return 1;
     return 0;
 }
 
-int(proj_main_loop)(int argc, char *argv[]){
+int (proj_main_loop)(int argc, char *argv[]){
+    loadSprites();
     if(process_interruptions()) return 1;
+    unloadSprites();
     return 0;
 }
 

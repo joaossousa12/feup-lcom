@@ -5,9 +5,9 @@
 #include <lcom/lcf.h>
 
 #include "../devices/keyboard/i8042.h"
-#include "../devices/video/video.c"
+#include "../devices/video/video.h"
 #include "../sprites/sprites.h"
-#include "../devices/mouse/mouse.c"
+#include "../devices/mouse/mouse.h"
 
 void drawGame();
 

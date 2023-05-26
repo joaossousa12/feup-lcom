@@ -7,7 +7,9 @@
 
 #include <lcom/lcf.h>
 #include <stdint.h>
-#include "KBC.h"
+#include <minix/sysutil.h>
+#include "KBC_mouse.h"
+#include "i8042.h"
 
 int (mouse_subscribe_int)(uint8_t *bit_no);
 

@@ -1,4 +1,4 @@
-#include "KBC.h"
+#include "KBC_mouse.h"
 
 int (read_KBC_status_mouse)(uint8_t *status){
     return util_sys_inb(0x64,status);
@@ -30,7 +30,7 @@ int (read_KBC_output_mouse)(uint8_t port, uint8_t *output, uint8_t mouse){ //dif
             if(util_sys_inb(port,output)) return 1;
             if(status & (BIT(6)|BIT(7))) return 1;
             if(mouse & !(status & BIT(5))) return 1;
-            if(!mouse & (status & Bit(5))) return 1;
+            if(!mouse & (status & BIT(5))) return 1;
             return 0;
         }
         tickdelay(micros_to_ticks(20000));

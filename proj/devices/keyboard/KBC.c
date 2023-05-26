@@ -1,10 +1,10 @@
 #include "KBC.h"
 
-int read_KBC_status(uint8_t *status){
+int (read_KBC_status)(uint8_t *status){
     return util_sys_inb(0x64,status);
 }
 
-int write_KBC_command(uint8_t port, uint8_t commandByte){
+int (write_KBC_command)(uint8_t port, uint8_t commandByte){
     uint8_t attempts=10;
     uint8_t status;
     while(attempts){
@@ -21,7 +21,7 @@ int write_KBC_command(uint8_t port, uint8_t commandByte){
     return 1;
 }
 
-int read_KBC_output(uint8_t port, uint8_t *output, uint8_t mouse){ //diferente do keyboard, atenção
+int (read_KBC_output)(uint8_t port, uint8_t *output, uint8_t mouse){
     uint8_t attempts=10;
     uint8_t status;
     while(attempts){
@@ -30,7 +30,7 @@ int read_KBC_output(uint8_t port, uint8_t *output, uint8_t mouse){ //diferente d
             if(util_sys_inb(port,output)) return 1;
             if(status & (BIT(6)|BIT(7))) return 1;
             if(mouse & !(status & BIT(5))) return 1;
-            if(!mouse & (status & Bit(5))) return 1;
+            if(!mouse & (status & BIT(5))) return 1;
             return 0;
         }
         tickdelay(micros_to_ticks(20000));
