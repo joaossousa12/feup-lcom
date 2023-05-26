@@ -10,6 +10,8 @@
 #include "../devices/keyboard/i8042.h"
 #include "../devices/video/video.h"
 #include "../sprites/sprites.h"
+#include "../MACROS.h"
+#include "../devices/mouse/mouse.h"
 
 int drawInstructionsPage();
 
