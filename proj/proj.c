@@ -104,7 +104,7 @@ int (proj_main_loop)(int argc, char *argv[]){
     if(set_graphic_mode(0x115)) return 1;
     loadSprites();
     if(process_interruptions()) return 1;
-    if (vg_exit()) return 1;
+    if (vg_exit() != 0) return 1;
     unloadSprites();
     return 0;
 }
