@@ -5,3 +5,4 @@ src/.gdbinit
 src/proj
 trace.txt
 output.txt
+.vscode
