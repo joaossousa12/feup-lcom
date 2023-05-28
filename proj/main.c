@@ -25,6 +25,11 @@ extern uint8_t scancode;
 
 extern struct packet mouse_packet;
 
+extern struct mouse_init_info mouse_state; //TO DEFINE WHEN SHOWING MOUSE SPRITE
+
+int ball_pos_X;
+int ball_pos_y;
+
 extern int counter;
 bool running = true;
 
@@ -84,22 +89,23 @@ int process_interruptions(){
                     if(msg.m_notify.interrupts & irq_mouse){
                         mouse_ih();         
                         mouse_sync();               //instruções verificam se o Mouse_button foi pressed
-                        if(gameMode == GAME_MODE) {
-                            if(mouse_packet.lb){
+                        mouse_position_update();       //TO BE IMPLEMENTED WHEN DRAWING MOUSE SPRITE
+                        if(gameMode == GAME_MODE) {         //VERIFY GAME LOOP cause after processin the shot cant register another one cause there is no loop
+                            if(mouse_packet.lb && ball_clicked_verify(ball_pos_X, ball_pos_y, mouse_state)){
                                 bool hold_mouse_lb = true;
                                 while (hold_mouse_lb)
                                 {
                                     mouse_ih();         
                                     mouse_sync();
+                                    mouse_position_update();
                                     if(!mouse_packet.lb){
-                                        process_tacada_MOUSE (mouse_packet.delta_x, mouse_packet.delta_y);
+                                        if((delta_x == 0) && (delta_y == 0)) // not finished yet
+                                        process_tacada_MOUSE (mouse_packet.delta_x, mouse_packet.delta_y, can_move, mouse_state);
                                         hold_mouse_lb = false;
                                     }  
                                 }
                                 
                             }
-                                
-                                
                         }
                     }
             }
@@ -107,6 +113,29 @@ int process_interruptions(){
     }
     return 0;
 }
+
+
+
+/*
+if(mouse_position >= sprite_borders || mouse_position <= sprite_borders){
+            
+        }
+        else{
+            //do nothing cause mouse didnt press on the ball
+        }
+
+
+
+
+bool ball_clicked_verify(ball_pos_X, ball_pos_y, mouse_state){
+    if((mouse_state.pos_x >= ball_pos_X - ball_radius && mouse_state.pos_x <= ball_pos_X + ball_radius) && (mouse_state.pos_y >= ball_pos_y - ball_radius && mouse_state.pos_y <= ball_pos_y + ball_radius)){
+        return true;
+    }
+    return false;
+}
+
+*/
+
 
 int(proj_main_loop)(int argc, char *argv[]){
     if(process_interruptions()) return 1;
