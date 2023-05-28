@@ -16,8 +16,8 @@ uint16_t delta_x;
 uint16_t delta_y;
 
 int current_index = 0;
-int x = 0;
-int y = 0;
+int x = 10;
+int y = 10;
 
 
 int (mouse_subscribe_int)(){
@@ -47,18 +47,20 @@ void (mouse_sync)(){
     }
 }
 
-void (to_packet) (){
+int (to_packet) (){
     for(int i=0; i<3; i++){
         mouse_packet.bytes[i] = bytes[i];
     }
 
-    mouse_packet.rb = bytes[0]&BIT(2);
+    mouse_packet.rb = bytes[0]&BIT(1);
     mouse_packet.lb = bytes[0]&BIT(0);
-    mouse_packet.mb = bytes[0]&BIT(1);
-    mouse_packet.x_ov = bytes[0]&BIT(2);
-    mouse_packet.y_ov = bytes[0]&BIT(2);
-    mouse_packet.delta_x = (bytes[0]&BIT(4)) ? 0xFF00 | bytes[1] : bytes[1];
-    mouse_packet.delta_y = (bytes[0]&BIT(5)) ? 0xFF00 | bytes[2] : bytes[2];
+    mouse_packet.mb = bytes[0]&BIT(2);
+    mouse_packet.x_ov = bytes[0]&BIT(6);
+    mouse_packet.y_ov = bytes[0]&BIT(7);
+    mouse_packet.delta_x = (bytes[0]&BIT(4)) ? (0xFF00 | bytes[1]) : bytes[1];
+    mouse_packet.delta_y = (bytes[0]&BIT(5)) ? (0xFF00 | bytes[2]) : bytes[2];
+
+    return 0;
 }
 
 int (mouse_write)(uint8_t command) {
@@ -76,4 +78,22 @@ int (mouse_write)(uint8_t command) {
     } while (mouse_response != 0xFA && attemps);
 
     return 1;
+}
+
+
+void (refresh_mouse_location)(){
+    // refresh x
+    if(mouse_packet.delta_x + x < 0 && !mouse_packet.x_ov)
+        x = 0;
+    else if(mouse_packet.delta_x + x > 770 && !mouse_packet.x_ov)
+        x = 770;
+    else if(!mouse_packet.x_ov)
+        x += mouse_packet.delta_x;
+    // refresh y
+    if(y - mouse_packet.delta_y < 0 && !mouse_packet.y_ov)
+        y = 0;
+    else if(y - mouse_packet.delta_y > 570 && !mouse_packet.y_ov)
+        y = 570;
+    else if(!mouse_packet.y_ov)
+        y -= mouse_packet.delta_y;    
 }

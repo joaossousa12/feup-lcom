@@ -50,6 +50,7 @@ void loadSprites(){
     obstacle = createSprite((xpm_map_t) obstacle_xpm);
     hole = createSprite((xpm_map_t) hole_xpm);
     ball = createSprite((xpm_map_t) ball_xpm);
+    mouse = createSprite((xpm_map_t) mouse_xpm);
 }
 
 void unloadSprites(){
@@ -60,4 +61,5 @@ void unloadSprites(){
     destroy_sprite(obstacle);
     destroy_sprite(hole);
     destroy_sprite(ball);
+    destroy_sprite(mouse);
 }

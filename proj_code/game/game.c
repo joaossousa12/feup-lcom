@@ -4,6 +4,14 @@ extern int gameMode;
 extern uint8_t *frame_buffer;
 extern vbe_mode_info_t mode_info;
 
+extern int x;
+extern int y;
+
+void (drawMouse)(){
+    if(gameMode == GAME_MODE)
+        drawSprite(mouse, x, y);
+}
+
 int drawGame(){
     int i = 0;
     while(i < mode_info.YResolution){

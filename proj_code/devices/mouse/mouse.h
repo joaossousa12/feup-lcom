@@ -19,8 +19,10 @@ void (mouse_ih)();
 
 void (mouse_sync)();
 
-void (to_packet) ();
+int (to_packet) ();
 
 int (mouse_write)(uint8_t command);
+
+void (refresh_mouse_location)();
 
 #endif //SRC_MOUSE_H

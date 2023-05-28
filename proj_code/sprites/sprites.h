@@ -10,6 +10,7 @@
 #include "../imgs/instructionsFIrst.xpm"
 #include "../imgs/middle.xpm"
 #include "../imgs/hole.xpm"
+#include "../imgs/mouse.xpm"
 
 
 typedef struct Sprite{
@@ -24,6 +25,7 @@ Sprite *middle;
 Sprite *obstacle;
 Sprite *hole;
 Sprite *ball;
+Sprite *mouse;
 
 Sprite *createSprite(xpm_map_t xpmMap);
 

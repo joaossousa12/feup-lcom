@@ -12,6 +12,8 @@
 #include "../devices/mouse/mouse.h"
 #include "../MACROS.h"
 
+void (drawMouse)();
+
 int drawGame();
 
 void process_keyboard_game(uint8_t scancode);

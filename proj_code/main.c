@@ -11,15 +11,15 @@
 int gameMode = MENU_MODE;
 
 extern vbe_mode_info_t mode_info;
-//extern uint16_t xRes;
-//extern uint16_t yRes;
-extern uint8_t x;
-extern uint8_t y;
-//extern unsigned bytesPerPixel;
+
+
+extern int x;
+extern int y;
+extern struct packet mouse_packet;
+extern uint8_t bytes[3];
+extern int current_index;
 
 extern uint8_t scancode;
-
-extern struct packet mouse_packet;
 
 int (main)(int argc, char *argv[])
 {
@@ -64,8 +64,6 @@ int (proj_main_loop)(int argc, char *argv[])
       return 1;
   if (mouse_subscribe_int() !=0)
       return 1;
-  
-  int i = 0;
 
   int ipc_status;
   message msg;
@@ -93,6 +91,7 @@ int (proj_main_loop)(int argc, char *argv[])
               else if (gameMode == INSTRUCTIONS_MODE){
                   if(drawInstructionsPage()) return 1;
               }
+              drawMouse();
               videoSet();
               clearBuffer();
           }
@@ -104,8 +103,18 @@ int (proj_main_loop)(int argc, char *argv[])
           }
           if (msg.m_notify.interrupts & 64){
               mouse_ih();
-              printf("Mouse interrupted");
-              i++;
+              mouse_sync();
+              if(current_index == 3){
+                current_index = 0;
+                to_packet();
+                refresh_mouse_location();
+                /*if(gameMode == GAME_MODE){
+                  if(mouse_packet.lb){
+                    // drag ball
+                  }
+                }*/
+              }
+              //printf("Mouse interrupted");
           }
       }
     }
