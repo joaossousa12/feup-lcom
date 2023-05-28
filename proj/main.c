@@ -22,7 +22,6 @@ int ball_pos_y;
 
 
 extern uint8_t scancode;
-
 extern struct packet mouse_packet;
 
 int (main)(int argc, char *argv[])

@@ -7,7 +7,7 @@
 extern vbe_mode_info_t mode_info;
 int trajectory_x[]; //deprecate this
 int trajectory_y[]; //deprecate this
-uint8_t trajectory_indexes[300];   //stores frame_buffer indexes of pertaining to trajectory
+uint8_t trajectory_indexes[160];   //stores frame_buffer indexes of pertaining to trajectory
 extern unsigned bytesPerPixel;
 
 
