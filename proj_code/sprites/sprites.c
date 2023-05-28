@@ -7,6 +7,7 @@ extern int y;
 
 void createSpriteArr(){
     char **fileNames[MAX_SPRITES] = { InitialMenu_xpm, instructionsFIrst_xpm, border_xpm, middle_xpm, obstacle_xpm, hole_xpm, ball_xpm, mouse_xpm};
+    
     for(int i=0; i < MAX_SPRITES; i++){
         Sprite *s = (Sprite *) malloc (sizeof(Sprite));
         if(s == NULL) continue;
@@ -31,6 +32,7 @@ void cleanSpritesArr(){
         else if(sprites[i]->pixels) free(sprites[i]->pixels);
 
         free(sprites[i]);
+
         sprites[i] = NULL;
     }
 }
@@ -38,10 +40,12 @@ void cleanSpritesArr(){
 
 int drawSprite(Sprite *sprite, int x, int y){
     uint16_t height = sprite->height, width = sprite->width;
+
     for (int h = 0 ; h < height ; h++) {
         for (int w = 0 ; w < width ; w++) {
             if (draw_pixel(x + w, y + h, sprite->pixels[w + h*width])) return 1;
         }
     }
+
     return 0; 
 }

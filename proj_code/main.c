@@ -1,3 +1,11 @@
+/**
+ * @brief MiniX-Golf
+ * 
+ * @author João Pedro Sousa, Bernardo Pinto, Carlos Madaleno
+ * 
+ * @date 28/05/2023
+*/
+
 #include <lcom/lcf.h>
 #include "devices/timer/timer.h"
 #include "devices/keyboard/keyboard.h"
@@ -11,7 +19,6 @@
 int gameMode = MENU_MODE;
 
 extern vbe_mode_info_t mode_info;
-
 
 extern int x;
 extern int y;
@@ -38,7 +45,7 @@ int (main)(int argc, char *argv[])
 }
 
 int beforeLoop(){
-    if(map_vmem(0x115)) return 1;
+    if(set_frame_buffer(0x115)) return 1;
     if(set_graphic_mode(0x115)) return 1;
     createSpriteArr();
     allocateSpaceBuffer();
@@ -71,10 +78,8 @@ int (proj_main_loop)(int argc, char *argv[])
   while (true) {
 
     if (driver_receive(ANY, &msg, &ipc_status) != 0) {
-      printf("Error");
       continue;
     }
-
 
     if(gameMode==EXIT_MODE) break;
 
@@ -114,7 +119,6 @@ int (proj_main_loop)(int argc, char *argv[])
                   }
                 }*/
               }
-              //printf("Mouse interrupted");
           }
       }
     }
