@@ -22,4 +22,13 @@
 #define WAIT_KBC        20000
 #define MAX_ATTEMPS     10
 
+#define MAKE_ESC        0x01
+#define MAKE_1          0x02
+#define MAKE_2          0x03
+#define MAKE_3          0x04
+#define MAKE_4          0x05
+#define MAKE_A          0x1E
+#define MAKE_D          0x20
+
+
 #endif /* _LCOM_I8042_H_ */

@@ -1,6 +1,9 @@
+//
+// Created by Bernardo on 17/05/2023.
+//
 
-#ifndef PROJ_GAME_H
-#define PROJ_GAME_H
+#ifndef PROJ_MENU_H
+#define PROJ_MENU_H
 
 #include <lcom/lcf.h>
 #include <stdio.h>
@@ -12,11 +15,8 @@
 #include "../devices/mouse/mouse.h"
 #include "../MACROS.h"
 
-int drawGame();
+int drawMenu();
 
-void process_keyboard_game(uint8_t scancode);
+void process_keyboard_menu(uint8_t scancode);
 
-void process_tacada_MOUSE (uint8_t x,uint8_t y);
-
-#endif //PROJ_GAME_H
-
+#endif //PROJ_MENU_H
