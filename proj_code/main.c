@@ -40,13 +40,13 @@ int (main)(int argc, char *argv[])
 int beforeLoop(){
     if(map_vmem(0x115)) return 1;
     if(set_graphic_mode(0x115)) return 1;
-    loadSprites();
+    createSpriteArr();
     allocateSpaceBuffer();
     return 0;
 }
 
 int afterLoop(){
-    unloadSprites();
+    cleanSpritesArr();
     if(vg_exit()!=0) return 1;
     return 0;
 }

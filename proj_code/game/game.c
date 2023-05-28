@@ -11,9 +11,11 @@ extern unsigned bytesPerPixel;
 extern int x;
 extern int y;
 
+extern Sprite *sprites[MAX_SPRITES];
+
 void (drawMouse)(){
     if(gameMode == GAME_MODE)
-        drawSprite(mouse, x, y);
+        drawSprite(sprites[7], x, y);
 }
 
 int drawGame(){
@@ -21,44 +23,44 @@ int drawGame(){
     while(i < mode_info.YResolution){
         if(i <= 10 || i >= (mode_info.YResolution - 11)){
             for(int j = 0; j < mode_info.XResolution; j++){
-                drawSprite(border, j, i); // top/bottom wall
+                drawSprite(sprites[2], j, i); // top/bottom wall
             }
         } else{
             for(int j = 0; j < 11; j++){ // left wall
-                drawSprite(border, j, i);
+                drawSprite(sprites[2], j, i);
             }
 
             int l = 11;
             while(l < mode_info.XResolution - 11){
                 if((i <= 100 && (l >= 300 && l <= 380))){
-                    drawSprite(obstacle, l, i);
+                    drawSprite(sprites[4], l, i);
                 } else if((i > 100 && i <= 140) && ((l >= 100 && l <= 225) || (l >= 300 && l <= 380) || (l >= 550))){
-                    drawSprite(obstacle, l, i);
+                    drawSprite(sprites[4], l, i);
                 } else if((i > 140 && i <= 240) && ((l >= 100 && l <= 225) || (l >= 300 && l <= 380) || (l >= 670 && l <= 730))){
-                    drawSprite(obstacle, l, i);
+                    drawSprite(sprites[4], l, i);
                 } else if((i > 240 && i <= 280) && ((l >= 100 && l <= 225) || (l >= 300 && l <= 380))){
-                    drawSprite(obstacle, l, i);
+                    drawSprite(sprites[4], l, i);
                 } else if((i > 280 && i <= 340) && (l >= 100 && l <= 225)){
-                    drawSprite(obstacle, l, i);
+                    drawSprite(sprites[4], l, i);
                 } else if((i > 350 && i <= 420) && ((l >= 320 && l <= 590) || (l >= 630 && l <= 740))){
-                    drawSprite(obstacle, l, i);
+                    drawSprite(sprites[4], l, i);
                 } else if((i > 460 && i <= 520) && ((l <= 225) || (l >= 400 && l <= 610))){
-                    drawSprite(obstacle, l, i);
+                    drawSprite(sprites[4], l, i);
                 } 
                 else{
-                    drawSprite(middle, l, i);
+                    drawSprite(sprites[3], l, i);
                 }
                 l++;
             }
             
             for(int j = 0; j < 11; j++){ // right wall
-                drawSprite(border, mode_info.XResolution - j - 1, i);
+                drawSprite(sprites[2], mode_info.XResolution - j - 1, i);
             }
         }
         i++;
     }
-    drawSprite(hole, 680, 45);
-    drawSprite(ball, 50, 550);
+    drawSprite(sprites[5], 680, 45);
+    drawSprite(sprites[6], 50, 550);
     memcpy(auxiliar_buffer,frame_buffer,width * height * bytesPerPixel);
     return 0;
 }
