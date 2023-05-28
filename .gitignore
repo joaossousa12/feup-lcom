@@ -1,0 +1,7 @@
+src/*.o
+src/*.d
+src/.depend
+src/.gdbinit
+src/proj
+trace.txt
+output.txt
