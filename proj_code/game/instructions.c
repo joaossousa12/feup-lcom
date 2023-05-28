@@ -9,7 +9,7 @@ extern uint8_t *frame_buffer;
 extern vbe_mode_info_t mode_info;
 
 int drawInstructionsPage(){
-    drawSprite(instructionsFIrst, 0, 0);
+    drawSprite(instructionsFirst, 0, 0);
     return 0;
 }
 
