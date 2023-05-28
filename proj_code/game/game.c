@@ -11,6 +11,9 @@ extern unsigned bytesPerPixel;
 extern int x;
 extern int y;
 
+int xBall;
+int yBall;
+
 void (drawMouse)(){
     if(gameMode == GAME_MODE)
         drawSprite(mouse, x, y);
@@ -18,6 +21,8 @@ void (drawMouse)(){
 
 int drawGame(){
     int i = 0;
+    xBall = 50;
+    yBall = 550;
     while(i < mode_info.YResolution){
         if(i <= 10 || i >= (mode_info.YResolution - 11)){
             for(int j = 0; j < mode_info.XResolution; j++){
@@ -58,7 +63,6 @@ int drawGame(){
         i++;
     }
     drawSprite(hole, 680, 45);
-    drawSprite(ball, 50, 550);
     memcpy(auxiliar_buffer,frame_buffer,width * height * bytesPerPixel);
     return 0;
 }

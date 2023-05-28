@@ -15,6 +15,10 @@ extern vbe_mode_info_t mode_info;
 
 extern int x;
 extern int y;
+
+extern int xBall;
+extern int yBall;
+
 extern struct packet mouse_packet;
 extern uint8_t bytes[3];
 extern int current_index;
@@ -87,6 +91,9 @@ int (proj_main_loop)(int argc, char *argv[])
               }
               else if (gameMode == GAME_MODE){
                   copyToAuxiliarBuffer();
+                  drawSprite(ball,xBall,yBall);
+                  yBall++;
+                  xBall++;
               }
               else if (gameMode == INSTRUCTIONS_MODE){
                   if(drawInstructionsPage()) return 1;
