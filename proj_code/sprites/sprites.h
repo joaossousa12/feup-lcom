@@ -4,12 +4,12 @@
 #include "../devices/video/video.h"
 #include "../devices/video/VBE.h"
 #include "../imgs/InitialMenu.xpm"
+#include "../imgs/border.xpm"
+#include "../imgs/ball.xpm"
+#include "../imgs/obstacle.xpm"
 #include "../imgs/instructionsFIrst.xpm"
 #include "../imgs/middle.xpm"
-#include "../imgs/border.xpm"
-#include "../imgs/obstacle.xpm"
 #include "../imgs/hole.xpm"
-#include "../imgs/ball.xpm"
 
 
 typedef struct Sprite{
@@ -18,9 +18,9 @@ typedef struct Sprite{
 } Sprite;
 
 Sprite *InitialMenu;
-Sprite *instructionsFIrst;
-Sprite *middle;
+Sprite *instructionsFirst;
 Sprite *border;
+Sprite *middle;
 Sprite *obstacle;
 Sprite *hole;
 Sprite *ball;
