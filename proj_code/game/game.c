@@ -5,7 +5,6 @@ extern uint8_t *frame_buffer;
 extern vbe_mode_info_t mode_info;
 
 int drawGame(){
-    memset(frame_buffer, 0xDDDDDD, mode_info.XResolution * mode_info.YResolution * ((mode_info.BitsPerPixel + 7) / 8));
     int i = 0;
     while(i < mode_info.YResolution){
         if(i <= 10 || i >= (mode_info.YResolution - 11)){

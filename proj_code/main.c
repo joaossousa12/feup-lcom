@@ -98,7 +98,6 @@ int (proj_main_loop)(int argc, char *argv[])
           }
           if (msg.m_notify.interrupts & 2){
               kbc_ih();
-              printf("Keyboard interrupt \n");
               if(gameMode == MENU_MODE) {process_keyboard_menu(scancode);}
               else if(gameMode == GAME_MODE) {process_keyboard_game(scancode);}
               else if(gameMode == INSTRUCTIONS_MODE) {process_keyboard_instructions(scancode);}

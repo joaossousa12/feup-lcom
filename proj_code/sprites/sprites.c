@@ -39,7 +39,6 @@ int drawSprite(Sprite *sprite, int x, int y){
             if (draw_pixel(x + w, y + h, sprite->colors[w + h*width])) return 1;
         }
     }
-    printf("done sprite");
     return 0; 
 }
 
