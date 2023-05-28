@@ -1,0 +1,31 @@
+\hypertarget{mouse_2i8042_8h_source}{}\doxysection{mouse/i8042.h}
+\label{mouse_2i8042_8h_source}\index{i8042.h@{i8042.h}}
+\mbox{\hyperlink{mouse_2i8042_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_LCOM\_I8042\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_LCOM\_I8042\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define IRQ\_KEYBOARD    1}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define BREAK\_ESC       0x81}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define MAKE\_CODE       BIT(7)}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define TWO\_BYTES       0xE0}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define ENABLE\_INT      BIT(0)}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define TIMEOUT\_ERROR   BIT(6)}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define PARITY\_ERROR    BIT(7)}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define FULL\_OUT\_BUFFER BIT(0)}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define FULL\_IN\_BUFFER  BIT(1)}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define KBC\_STATUS\_REG  0x64}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define KBC\_IN\_CMD      0x64}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#define KBC\_OUT\_CMD     0x60}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define KBC\_READ\_CMD    0x20}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define KBC\_WRITE\_CMD   0x60}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define WAIT\_KBC        20000}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define MAX\_ATTEMPS     10}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_LCOM\_I8042\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

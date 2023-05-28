@@ -1,0 +1,114 @@
+\hypertarget{mouse_8h}{}\doxysection{mouse.\+h File Reference}
+\label{mouse_8h}\index{mouse.h@{mouse.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$minix/sysutil.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}KBC\+\_\+mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}i8042.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{mouse_8h_a08895a8a691590216c1e72bbf1b2d333}{mouse\+\_\+subscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Uses irq\+\_\+setpolicy for the mouse interrupts. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8h_a3ecf823d80520009ae5e0d76ae40a3c3}{mouse\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes mouse interrupts. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse_8h_a210374b50462acdedab00df64d5cea3c}{mouse\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Mouse input handler. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse_8h_a13bc1100847565997186b2115c5cba53}{mouse\+\_\+sync}} ()
+\begin{DoxyCompactList}\small\item\em Synchronizes and processes mouse data received from the mouse controller. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8h_a9911cf0cbb0da27cffce0690f85fbf64}{to\+\_\+packet}} ()
+\begin{DoxyCompactList}\small\item\em Converts mouse data bytes to a mouse packet struct. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8h_a1703c3c5b61eef30d724b15cafd1d75e}{mouse\+\_\+write}} (uint8\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em Writes a command to the mouse controller. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse_8h_a8fe2f76690ab4f58854ed25a52535eb5}{refresh\+\_\+mouse\+\_\+location}} ()
+\begin{DoxyCompactList}\small\item\em Refreshes the mouse location based on the delta values in the mouse packet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mouse_8h_a210374b50462acdedab00df64d5cea3c}\label{mouse_8h_a210374b50462acdedab00df64d5cea3c}} 
+\index{mouse.h@{mouse.h}!mouse\_ih@{mouse\_ih}}
+\index{mouse\_ih@{mouse\_ih}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_ih()}{mouse\_ih()}}
+{\footnotesize\ttfamily void() mouse\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Mouse input handler. 
+
+\mbox{\Hypertarget{mouse_8h_a08895a8a691590216c1e72bbf1b2d333}\label{mouse_8h_a08895a8a691590216c1e72bbf1b2d333}} 
+\index{mouse.h@{mouse.h}!mouse\_subscribe\_int@{mouse\_subscribe\_int}}
+\index{mouse\_subscribe\_int@{mouse\_subscribe\_int}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_subscribe\_int()}{mouse\_subscribe\_int()}}
+{\footnotesize\ttfamily int() mouse\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Uses irq\+\_\+setpolicy for the mouse interrupts. 
+
+\begin{DoxyReturn}{Returns}
+0 on success or 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mouse_8h_a13bc1100847565997186b2115c5cba53}\label{mouse_8h_a13bc1100847565997186b2115c5cba53}} 
+\index{mouse.h@{mouse.h}!mouse\_sync@{mouse\_sync}}
+\index{mouse\_sync@{mouse\_sync}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_sync()}{mouse\_sync()}}
+{\footnotesize\ttfamily void() mouse\+\_\+sync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Synchronizes and processes mouse data received from the mouse controller. 
+
+\mbox{\Hypertarget{mouse_8h_a3ecf823d80520009ae5e0d76ae40a3c3}\label{mouse_8h_a3ecf823d80520009ae5e0d76ae40a3c3}} 
+\index{mouse.h@{mouse.h}!mouse\_unsubscribe\_int@{mouse\_unsubscribe\_int}}
+\index{mouse\_unsubscribe\_int@{mouse\_unsubscribe\_int}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_unsubscribe\_int()}{mouse\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int() mouse\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes mouse interrupts. 
+
+\begin{DoxyReturn}{Returns}
+0 on success, 1 on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mouse_8h_a1703c3c5b61eef30d724b15cafd1d75e}\label{mouse_8h_a1703c3c5b61eef30d724b15cafd1d75e}} 
+\index{mouse.h@{mouse.h}!mouse\_write@{mouse\_write}}
+\index{mouse\_write@{mouse\_write}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_write()}{mouse\_write()}}
+{\footnotesize\ttfamily int() mouse\+\_\+write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{command }\end{DoxyParamCaption})}
+
+
+
+Writes a command to the mouse controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The command to be sent to the mouse controller.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero if there was an error sending the command or receiving the response. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mouse_8h_a8fe2f76690ab4f58854ed25a52535eb5}\label{mouse_8h_a8fe2f76690ab4f58854ed25a52535eb5}} 
+\index{mouse.h@{mouse.h}!refresh\_mouse\_location@{refresh\_mouse\_location}}
+\index{refresh\_mouse\_location@{refresh\_mouse\_location}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{refresh\_mouse\_location()}{refresh\_mouse\_location()}}
+{\footnotesize\ttfamily void() refresh\+\_\+mouse\+\_\+location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Refreshes the mouse location based on the delta values in the mouse packet. 
+
+\mbox{\Hypertarget{mouse_8h_a9911cf0cbb0da27cffce0690f85fbf64}\label{mouse_8h_a9911cf0cbb0da27cffce0690f85fbf64}} 
+\index{mouse.h@{mouse.h}!to\_packet@{to\_packet}}
+\index{to\_packet@{to\_packet}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{to\_packet()}{to\_packet()}}
+{\footnotesize\ttfamily int() to\+\_\+packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Converts mouse data bytes to a mouse packet struct. 
+
+\begin{DoxyReturn}{Returns}
+0 on success or 1 otherwise 
+\end{DoxyReturn}

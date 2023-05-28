@@ -1,0 +1,137 @@
+\hypertarget{video_8h}{}\doxysection{video.\+h File Reference}
+\label{video_8h}\index{video.h@{video.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}VBE.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{video_8h_a967432a6c8128a907b937b0f3f4b4472}{set\+\_\+graphic\+\_\+mode}} (uint16\+\_\+t submode)
+\begin{DoxyCompactList}\small\item\em Sets the graphics mode. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8h_a55bb0148c696baca125c2c03bd585ae5}{set\+\_\+frame\+\_\+buffer}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Sets the frame buffer for video mode. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video_8h_abcd14d829edc3257916bdcc1a9aca216}{draw\+\_\+pixel}} (uint16\+\_\+t \mbox{\hyperlink{mouse_8c_a6150e0515f7202e2fb518f7206ed97dc}{x}}, uint16\+\_\+t \mbox{\hyperlink{mouse_8c_a0a2f84ed7838f07779ae24c5a9086d33}{y}}, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws a pixel on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{video_8h_a20bbd4d45e3f01305dd709f5a9cc9952}{clear\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Clears the frame buffer using memset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{video_8h_a2bb2aa9af8a39ea935178b7e4e21f812}{allocate\+Space\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Allocates memory for the frame buffer and auxiliary buffer using memset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{video_8h_af2f2c831c95c174bdf6d9e6f68559088}{video\+Set}} ()
+\begin{DoxyCompactList}\small\item\em Sets the video buffer to the contents of the frame buffer using memcpy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{video_8h_a1a3b2fbeeb839fe5f8b4651ca96e32e7}{copy\+To\+Auxiliar\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Copies the contents of the auxiliar buffer to the frame buffer using memcpy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{video_8h_ac71cc0161ade50f7e55f6a0ea6670a3b}{base\+Address}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{video_8h_a2bb2aa9af8a39ea935178b7e4e21f812}\label{video_8h_a2bb2aa9af8a39ea935178b7e4e21f812}} 
+\index{video.h@{video.h}!allocateSpaceBuffer@{allocateSpaceBuffer}}
+\index{allocateSpaceBuffer@{allocateSpaceBuffer}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{allocateSpaceBuffer()}{allocateSpaceBuffer()}}
+{\footnotesize\ttfamily void allocate\+Space\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Allocates memory for the frame buffer and auxiliary buffer using memset. 
+
+\mbox{\Hypertarget{video_8h_a20bbd4d45e3f01305dd709f5a9cc9952}\label{video_8h_a20bbd4d45e3f01305dd709f5a9cc9952}} 
+\index{video.h@{video.h}!clearBuffer@{clearBuffer}}
+\index{clearBuffer@{clearBuffer}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{clearBuffer()}{clearBuffer()}}
+{\footnotesize\ttfamily void clear\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the frame buffer using memset. 
+
+\mbox{\Hypertarget{video_8h_a1a3b2fbeeb839fe5f8b4651ca96e32e7}\label{video_8h_a1a3b2fbeeb839fe5f8b4651ca96e32e7}} 
+\index{video.h@{video.h}!copyToAuxiliarBuffer@{copyToAuxiliarBuffer}}
+\index{copyToAuxiliarBuffer@{copyToAuxiliarBuffer}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{copyToAuxiliarBuffer()}{copyToAuxiliarBuffer()}}
+{\footnotesize\ttfamily void copy\+To\+Auxiliar\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Copies the contents of the auxiliar buffer to the frame buffer using memcpy. 
+
+\mbox{\Hypertarget{video_8h_abcd14d829edc3257916bdcc1a9aca216}\label{video_8h_abcd14d829edc3257916bdcc1a9aca216}} 
+\index{video.h@{video.h}!draw\_pixel@{draw\_pixel}}
+\index{draw\_pixel@{draw\_pixel}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{draw\_pixel()}{draw\_pixel()}}
+{\footnotesize\ttfamily int draw\+\_\+pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws a pixel on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the pixel.\\
+\hline
+{\em y} & The y-\/coordinate of the pixel.\\
+\hline
+{\em color} & The color value of the pixel.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero if there was an error drawing the pixel. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{video_8h_a55bb0148c696baca125c2c03bd585ae5}\label{video_8h_a55bb0148c696baca125c2c03bd585ae5}} 
+\index{video.h@{video.h}!set\_frame\_buffer@{set\_frame\_buffer}}
+\index{set\_frame\_buffer@{set\_frame\_buffer}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{set\_frame\_buffer()}{set\_frame\_buffer()}}
+{\footnotesize\ttfamily int() set\+\_\+frame\+\_\+buffer (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Sets the frame buffer for video mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The video mode to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero if there was an error setting the frame buffer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{video_8h_a967432a6c8128a907b937b0f3f4b4472}\label{video_8h_a967432a6c8128a907b937b0f3f4b4472}} 
+\index{video.h@{video.h}!set\_graphic\_mode@{set\_graphic\_mode}}
+\index{set\_graphic\_mode@{set\_graphic\_mode}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{set\_graphic\_mode()}{set\_graphic\_mode()}}
+{\footnotesize\ttfamily int() set\+\_\+graphic\+\_\+mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{submode }\end{DoxyParamCaption})}
+
+
+
+Sets the graphics mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em submode} & The specific submode of the graphics mode to be set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero if there was an error setting the graphics mode. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{video_8h_af2f2c831c95c174bdf6d9e6f68559088}\label{video_8h_af2f2c831c95c174bdf6d9e6f68559088}} 
+\index{video.h@{video.h}!videoSet@{videoSet}}
+\index{videoSet@{videoSet}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{videoSet()}{videoSet()}}
+{\footnotesize\ttfamily void video\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets the video buffer to the contents of the frame buffer using memcpy. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{video_8h_ac71cc0161ade50f7e55f6a0ea6670a3b}\label{video_8h_ac71cc0161ade50f7e55f6a0ea6670a3b}} 
+\index{video.h@{video.h}!baseAddress@{baseAddress}}
+\index{baseAddress@{baseAddress}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{baseAddress}{baseAddress}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ base\+Address}
+

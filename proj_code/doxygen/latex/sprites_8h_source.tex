@@ -1,0 +1,39 @@
+\hypertarget{sprites_8h_source}{}\doxysection{sprites.\+h}
+\label{sprites_8h_source}\index{sprites.h@{sprites.h}}
+\mbox{\hyperlink{sprites_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef SPRITES\_H}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define SPRITES\_H}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}../devices/video/video.h"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}../devices/video/VBE.h"{}}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}../images/InitialMenu.xpm"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}../images/border.xpm"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}../images/ball.xpm"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}../images/obstacle.xpm"{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}../images/instructionsFIrst.xpm"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}../images/middle.xpm"{}}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}../images/hole.xpm"{}}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include "{}../images/mouse.xpm"{}}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define MAX\_SPRITES 8}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_sprite}{Sprite}}\{}
+\DoxyCodeLine{29     uint32\_t *\mbox{\hyperlink{struct_sprite_ab4a0b19c6be9ac26c7abcf6093f0c52e}{pixels}};}
+\DoxyCodeLine{30     uint16\_t \mbox{\hyperlink{struct_sprite_a7d2d72b3ea47dab6db0ada4b36017d7a}{height}}, \mbox{\hyperlink{struct_sprite_a126fa60a3de74e112dc5fa7ab1809f37}{width}};}
+\DoxyCodeLine{31 \} \mbox{\hyperlink{struct_sprite}{Sprite}};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \mbox{\hyperlink{struct_sprite}{Sprite}} *\mbox{\hyperlink{sprites_8h_afa9fd6de06e462f1ae78b4862e69fe69}{sprites}}[\mbox{\hyperlink{sprites_8h_aeb21c7ac080eea985b7701df626d9cf4}{MAX\_SPRITES}}]; \textcolor{comment}{// sprite's array}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{47 \textcolor{keywordtype}{int} \mbox{\hyperlink{sprites_8h_a3fc1965bb7f45fd72fff8a402c507186}{drawSprite}}(\mbox{\hyperlink{struct_sprite}{Sprite}} *sprite, \textcolor{keywordtype}{int} \mbox{\hyperlink{mouse_8c_a6150e0515f7202e2fb518f7206ed97dc}{x}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{mouse_8c_a0a2f84ed7838f07779ae24c5a9086d33}{y}});}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{53 \textcolor{keywordtype}{void} \mbox{\hyperlink{sprites_8h_ab089535fedd4902b5d0c870d711e4e93}{createSpriteArr}}();}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{59 \textcolor{keywordtype}{void} \mbox{\hyperlink{sprites_8h_ad2e7708e11fbd6921fc7ae5eb80babad}{cleanSpritesArr}}();}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{62 }
+
+\end{DoxyCode}

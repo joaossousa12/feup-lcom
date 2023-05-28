@@ -1,0 +1,77 @@
+\hypertarget{_k_b_c_8h}{}\doxysection{KBC.\+h File Reference}
+\label{_k_b_c_8h}\index{KBC.h@{KBC.h}}
+{\ttfamily \#include $<$minix/sysutil.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}i8042.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{_k_b_c_8h_ac024af91b156e4fc61ee3886b891de21}{read\+\_\+\+KBC\+\_\+status}} (uint8\+\_\+t $\ast$status)
+\begin{DoxyCompactList}\small\item\em Reads the status register of the KBC. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{_k_b_c_8h_ac7f264677f62648ac34476a46980af2f}{read\+\_\+\+KBC\+\_\+output}} (uint8\+\_\+t port, uint8\+\_\+t $\ast$output, uint8\+\_\+t mouse)
+\begin{DoxyCompactList}\small\item\em Reads the output data from the KBC. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{_k_b_c_8h_a34b653b3939fffe883c903cdadb36d3a}{write\+\_\+\+KBC\+\_\+command}} (uint8\+\_\+t port, uint8\+\_\+t command\+Byte)
+\begin{DoxyCompactList}\small\item\em Writes a command byte to the KBC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_k_b_c_8h_ac7f264677f62648ac34476a46980af2f}\label{_k_b_c_8h_ac7f264677f62648ac34476a46980af2f}} 
+\index{KBC.h@{KBC.h}!read\_KBC\_output@{read\_KBC\_output}}
+\index{read\_KBC\_output@{read\_KBC\_output}!KBC.h@{KBC.h}}
+\doxysubsubsection{\texorpdfstring{read\_KBC\_output()}{read\_KBC\_output()}}
+{\footnotesize\ttfamily int() read\+\_\+\+KBC\+\_\+output (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t $\ast$}]{output,  }\item[{uint8\+\_\+t}]{mouse }\end{DoxyParamCaption})}
+
+
+
+Reads the output data from the KBC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port from which to read the output data.\\
+\hline
+{\em output} & Pointer to a variable where the output data will be stored.\\
+\hline
+{\em mouse} & Indicates whether the data is coming from the mouse or keyboard (1 for mouse, 0 for keyboard).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero if there was an error reading the output data or if the data is not valid. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_k_b_c_8h_ac024af91b156e4fc61ee3886b891de21}\label{_k_b_c_8h_ac024af91b156e4fc61ee3886b891de21}} 
+\index{KBC.h@{KBC.h}!read\_KBC\_status@{read\_KBC\_status}}
+\index{read\_KBC\_status@{read\_KBC\_status}!KBC.h@{KBC.h}}
+\doxysubsubsection{\texorpdfstring{read\_KBC\_status()}{read\_KBC\_status()}}
+{\footnotesize\ttfamily int() read\+\_\+\+KBC\+\_\+status (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{status }\end{DoxyParamCaption})}
+
+
+
+Reads the status register of the KBC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & A pointer to the variable where the status register value will be stored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero if there was an error reading the status register. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_k_b_c_8h_a34b653b3939fffe883c903cdadb36d3a}\label{_k_b_c_8h_a34b653b3939fffe883c903cdadb36d3a}} 
+\index{KBC.h@{KBC.h}!write\_KBC\_command@{write\_KBC\_command}}
+\index{write\_KBC\_command@{write\_KBC\_command}!KBC.h@{KBC.h}}
+\doxysubsubsection{\texorpdfstring{write\_KBC\_command()}{write\_KBC\_command()}}
+{\footnotesize\ttfamily int() write\+\_\+\+KBC\+\_\+command (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{command\+Byte }\end{DoxyParamCaption})}
+
+
+
+Writes a command byte to the KBC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port to which the command byte will be written.\\
+\hline
+{\em command\+Byte} & The command byte to be written.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero if there was an error writing the command byte. 
+\end{DoxyReturn}

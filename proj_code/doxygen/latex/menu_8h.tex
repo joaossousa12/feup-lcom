@@ -1,0 +1,49 @@
+\hypertarget{menu_8h}{}\doxysection{menu.\+h File Reference}
+\label{menu_8h}\index{menu.h@{menu.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../devices/keyboard/i8042.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../devices/video/video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../sprites/sprites.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../devices/mouse/mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+MACROS.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{menu_8h_a252c3e287edc6236251be9dd8517334c}{draw\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Draws the main menu on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_a8b51b87762e5b4c1b07d7b2a7833e5fd}{process\+\_\+keyboard\+\_\+menu}} (uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_aa1de7a5557e9d96b83cf03f73c92163f}{scancode}})
+\begin{DoxyCompactList}\small\item\em Processes keyboard input from the user and changes view based on it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{menu_8h_a252c3e287edc6236251be9dd8517334c}\label{menu_8h_a252c3e287edc6236251be9dd8517334c}} 
+\index{menu.h@{menu.h}!drawMenu@{drawMenu}}
+\index{drawMenu@{drawMenu}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{drawMenu()}{drawMenu()}}
+{\footnotesize\ttfamily int draw\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the main menu on the screen. 
+
+\begin{DoxyReturn}{Returns}
+0 on success, 1 if there was an error drawing the menu. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{menu_8h_a8b51b87762e5b4c1b07d7b2a7833e5fd}\label{menu_8h_a8b51b87762e5b4c1b07d7b2a7833e5fd}} 
+\index{menu.h@{menu.h}!process\_keyboard\_menu@{process\_keyboard\_menu}}
+\index{process\_keyboard\_menu@{process\_keyboard\_menu}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{process\_keyboard\_menu()}{process\_keyboard\_menu()}}
+{\footnotesize\ttfamily void process\+\_\+keyboard\+\_\+menu (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scancode }\end{DoxyParamCaption})}
+
+
+
+Processes keyboard input from the user and changes view based on it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scancode} & represents the key pressed by the user \\
+\hline
+\end{DoxyParams}

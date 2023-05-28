@@ -1,0 +1,136 @@
+\hypertarget{mouse_2i8042_8h}{}\doxysection{i8042.\+h File Reference}
+\label{mouse_2i8042_8h}\index{i8042.h@{i8042.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mouse_2i8042_8h_a8092843c014fad609c1b01a4604a44a3}{IRQ\+\_\+\+KEYBOARD}}~1
+\item 
+\#define \mbox{\hyperlink{mouse_2i8042_8h_a82218ef5fdf988f42e5056a0da2f9fb5}{BREAK\+\_\+\+ESC}}~0x81
+\item 
+\#define \mbox{\hyperlink{mouse_2i8042_8h_a5573533027e427e3a11b4daa75621598}{MAKE\+\_\+\+CODE}}~BIT(7)
+\item 
+\#define \mbox{\hyperlink{mouse_2i8042_8h_ab427e6926fcc47eb1c02c1f78162b6f6}{TWO\+\_\+\+BYTES}}~0x\+E0
+\item 
+\#define \mbox{\hyperlink{mouse_2i8042_8h_a34326f1c6bfccd8b9084c5ae2b4918a1}{ENABLE\+\_\+\+INT}}~BIT(0)
+\item 
+\#define \mbox{\hyperlink{mouse_2i8042_8h_aefc48d416c882f06edaf6d01779d4d74}{TIMEOUT\+\_\+\+ERROR}}~BIT(6)
+\item 
+\#define \mbox{\hyperlink{mouse_2i8042_8h_a81d2ca6759f3f3bf04556b7558aea6bc}{PARITY\+\_\+\+ERROR}}~BIT(7)
+\item 
+\#define \mbox{\hyperlink{mouse_2i8042_8h_a10313c9dfee4ce9cb293f84b50d14889}{FULL\+\_\+\+OUT\+\_\+\+BUFFER}}~BIT(0)
+\item 
+\#define \mbox{\hyperlink{mouse_2i8042_8h_a7eb083dcc1b2aecf91bd8c9108e17b37}{FULL\+\_\+\+IN\+\_\+\+BUFFER}}~BIT(1)
+\item 
+\#define \mbox{\hyperlink{mouse_2i8042_8h_a0b4e336aad52f96e65dd212f76675d8d}{KBC\+\_\+\+STATUS\+\_\+\+REG}}~0x64
+\item 
+\#define \mbox{\hyperlink{mouse_2i8042_8h_a445f67cfdfb7046efc77f7df5d9835e2}{KBC\+\_\+\+IN\+\_\+\+CMD}}~0x64
+\item 
+\#define \mbox{\hyperlink{mouse_2i8042_8h_ade9c0b4f31cee479afed8b824fff02a0}{KBC\+\_\+\+OUT\+\_\+\+CMD}}~0x60
+\item 
+\#define \mbox{\hyperlink{mouse_2i8042_8h_a595a5cad2d3c793963da50865b2c1b47}{KBC\+\_\+\+READ\+\_\+\+CMD}}~0x20
+\item 
+\#define \mbox{\hyperlink{mouse_2i8042_8h_aaa62a6987753a109d2f7a609ce8b7334}{KBC\+\_\+\+WRITE\+\_\+\+CMD}}~0x60
+\item 
+\#define \mbox{\hyperlink{mouse_2i8042_8h_aa554763d6a066605edecacdea834da9b}{WAIT\+\_\+\+KBC}}~20000
+\item 
+\#define \mbox{\hyperlink{mouse_2i8042_8h_a8ca6d466a780b24900c3e94a5798230f}{MAX\+\_\+\+ATTEMPS}}~10
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{mouse_2i8042_8h_a82218ef5fdf988f42e5056a0da2f9fb5}\label{mouse_2i8042_8h_a82218ef5fdf988f42e5056a0da2f9fb5}} 
+\index{mouse/i8042.h@{mouse/i8042.h}!BREAK\_ESC@{BREAK\_ESC}}
+\index{BREAK\_ESC@{BREAK\_ESC}!mouse/i8042.h@{mouse/i8042.h}}
+\doxysubsubsection{\texorpdfstring{BREAK\_ESC}{BREAK\_ESC}}
+{\footnotesize\ttfamily \#define BREAK\+\_\+\+ESC~0x81}
+
+\mbox{\Hypertarget{mouse_2i8042_8h_a34326f1c6bfccd8b9084c5ae2b4918a1}\label{mouse_2i8042_8h_a34326f1c6bfccd8b9084c5ae2b4918a1}} 
+\index{mouse/i8042.h@{mouse/i8042.h}!ENABLE\_INT@{ENABLE\_INT}}
+\index{ENABLE\_INT@{ENABLE\_INT}!mouse/i8042.h@{mouse/i8042.h}}
+\doxysubsubsection{\texorpdfstring{ENABLE\_INT}{ENABLE\_INT}}
+{\footnotesize\ttfamily \#define ENABLE\+\_\+\+INT~BIT(0)}
+
+\mbox{\Hypertarget{mouse_2i8042_8h_a7eb083dcc1b2aecf91bd8c9108e17b37}\label{mouse_2i8042_8h_a7eb083dcc1b2aecf91bd8c9108e17b37}} 
+\index{mouse/i8042.h@{mouse/i8042.h}!FULL\_IN\_BUFFER@{FULL\_IN\_BUFFER}}
+\index{FULL\_IN\_BUFFER@{FULL\_IN\_BUFFER}!mouse/i8042.h@{mouse/i8042.h}}
+\doxysubsubsection{\texorpdfstring{FULL\_IN\_BUFFER}{FULL\_IN\_BUFFER}}
+{\footnotesize\ttfamily \#define FULL\+\_\+\+IN\+\_\+\+BUFFER~BIT(1)}
+
+\mbox{\Hypertarget{mouse_2i8042_8h_a10313c9dfee4ce9cb293f84b50d14889}\label{mouse_2i8042_8h_a10313c9dfee4ce9cb293f84b50d14889}} 
+\index{mouse/i8042.h@{mouse/i8042.h}!FULL\_OUT\_BUFFER@{FULL\_OUT\_BUFFER}}
+\index{FULL\_OUT\_BUFFER@{FULL\_OUT\_BUFFER}!mouse/i8042.h@{mouse/i8042.h}}
+\doxysubsubsection{\texorpdfstring{FULL\_OUT\_BUFFER}{FULL\_OUT\_BUFFER}}
+{\footnotesize\ttfamily \#define FULL\+\_\+\+OUT\+\_\+\+BUFFER~BIT(0)}
+
+\mbox{\Hypertarget{mouse_2i8042_8h_a8092843c014fad609c1b01a4604a44a3}\label{mouse_2i8042_8h_a8092843c014fad609c1b01a4604a44a3}} 
+\index{mouse/i8042.h@{mouse/i8042.h}!IRQ\_KEYBOARD@{IRQ\_KEYBOARD}}
+\index{IRQ\_KEYBOARD@{IRQ\_KEYBOARD}!mouse/i8042.h@{mouse/i8042.h}}
+\doxysubsubsection{\texorpdfstring{IRQ\_KEYBOARD}{IRQ\_KEYBOARD}}
+{\footnotesize\ttfamily \#define IRQ\+\_\+\+KEYBOARD~1}
+
+\mbox{\Hypertarget{mouse_2i8042_8h_a445f67cfdfb7046efc77f7df5d9835e2}\label{mouse_2i8042_8h_a445f67cfdfb7046efc77f7df5d9835e2}} 
+\index{mouse/i8042.h@{mouse/i8042.h}!KBC\_IN\_CMD@{KBC\_IN\_CMD}}
+\index{KBC\_IN\_CMD@{KBC\_IN\_CMD}!mouse/i8042.h@{mouse/i8042.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_IN\_CMD}{KBC\_IN\_CMD}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+IN\+\_\+\+CMD~0x64}
+
+\mbox{\Hypertarget{mouse_2i8042_8h_ade9c0b4f31cee479afed8b824fff02a0}\label{mouse_2i8042_8h_ade9c0b4f31cee479afed8b824fff02a0}} 
+\index{mouse/i8042.h@{mouse/i8042.h}!KBC\_OUT\_CMD@{KBC\_OUT\_CMD}}
+\index{KBC\_OUT\_CMD@{KBC\_OUT\_CMD}!mouse/i8042.h@{mouse/i8042.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_OUT\_CMD}{KBC\_OUT\_CMD}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+OUT\+\_\+\+CMD~0x60}
+
+\mbox{\Hypertarget{mouse_2i8042_8h_a595a5cad2d3c793963da50865b2c1b47}\label{mouse_2i8042_8h_a595a5cad2d3c793963da50865b2c1b47}} 
+\index{mouse/i8042.h@{mouse/i8042.h}!KBC\_READ\_CMD@{KBC\_READ\_CMD}}
+\index{KBC\_READ\_CMD@{KBC\_READ\_CMD}!mouse/i8042.h@{mouse/i8042.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_READ\_CMD}{KBC\_READ\_CMD}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+READ\+\_\+\+CMD~0x20}
+
+\mbox{\Hypertarget{mouse_2i8042_8h_a0b4e336aad52f96e65dd212f76675d8d}\label{mouse_2i8042_8h_a0b4e336aad52f96e65dd212f76675d8d}} 
+\index{mouse/i8042.h@{mouse/i8042.h}!KBC\_STATUS\_REG@{KBC\_STATUS\_REG}}
+\index{KBC\_STATUS\_REG@{KBC\_STATUS\_REG}!mouse/i8042.h@{mouse/i8042.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_STATUS\_REG}{KBC\_STATUS\_REG}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+STATUS\+\_\+\+REG~0x64}
+
+\mbox{\Hypertarget{mouse_2i8042_8h_aaa62a6987753a109d2f7a609ce8b7334}\label{mouse_2i8042_8h_aaa62a6987753a109d2f7a609ce8b7334}} 
+\index{mouse/i8042.h@{mouse/i8042.h}!KBC\_WRITE\_CMD@{KBC\_WRITE\_CMD}}
+\index{KBC\_WRITE\_CMD@{KBC\_WRITE\_CMD}!mouse/i8042.h@{mouse/i8042.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_WRITE\_CMD}{KBC\_WRITE\_CMD}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+WRITE\+\_\+\+CMD~0x60}
+
+\mbox{\Hypertarget{mouse_2i8042_8h_a5573533027e427e3a11b4daa75621598}\label{mouse_2i8042_8h_a5573533027e427e3a11b4daa75621598}} 
+\index{mouse/i8042.h@{mouse/i8042.h}!MAKE\_CODE@{MAKE\_CODE}}
+\index{MAKE\_CODE@{MAKE\_CODE}!mouse/i8042.h@{mouse/i8042.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_CODE}{MAKE\_CODE}}
+{\footnotesize\ttfamily \#define MAKE\+\_\+\+CODE~BIT(7)}
+
+\mbox{\Hypertarget{mouse_2i8042_8h_a8ca6d466a780b24900c3e94a5798230f}\label{mouse_2i8042_8h_a8ca6d466a780b24900c3e94a5798230f}} 
+\index{mouse/i8042.h@{mouse/i8042.h}!MAX\_ATTEMPS@{MAX\_ATTEMPS}}
+\index{MAX\_ATTEMPS@{MAX\_ATTEMPS}!mouse/i8042.h@{mouse/i8042.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_ATTEMPS}{MAX\_ATTEMPS}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+ATTEMPS~10}
+
+\mbox{\Hypertarget{mouse_2i8042_8h_a81d2ca6759f3f3bf04556b7558aea6bc}\label{mouse_2i8042_8h_a81d2ca6759f3f3bf04556b7558aea6bc}} 
+\index{mouse/i8042.h@{mouse/i8042.h}!PARITY\_ERROR@{PARITY\_ERROR}}
+\index{PARITY\_ERROR@{PARITY\_ERROR}!mouse/i8042.h@{mouse/i8042.h}}
+\doxysubsubsection{\texorpdfstring{PARITY\_ERROR}{PARITY\_ERROR}}
+{\footnotesize\ttfamily \#define PARITY\+\_\+\+ERROR~BIT(7)}
+
+\mbox{\Hypertarget{mouse_2i8042_8h_aefc48d416c882f06edaf6d01779d4d74}\label{mouse_2i8042_8h_aefc48d416c882f06edaf6d01779d4d74}} 
+\index{mouse/i8042.h@{mouse/i8042.h}!TIMEOUT\_ERROR@{TIMEOUT\_ERROR}}
+\index{TIMEOUT\_ERROR@{TIMEOUT\_ERROR}!mouse/i8042.h@{mouse/i8042.h}}
+\doxysubsubsection{\texorpdfstring{TIMEOUT\_ERROR}{TIMEOUT\_ERROR}}
+{\footnotesize\ttfamily \#define TIMEOUT\+\_\+\+ERROR~BIT(6)}
+
+\mbox{\Hypertarget{mouse_2i8042_8h_ab427e6926fcc47eb1c02c1f78162b6f6}\label{mouse_2i8042_8h_ab427e6926fcc47eb1c02c1f78162b6f6}} 
+\index{mouse/i8042.h@{mouse/i8042.h}!TWO\_BYTES@{TWO\_BYTES}}
+\index{TWO\_BYTES@{TWO\_BYTES}!mouse/i8042.h@{mouse/i8042.h}}
+\doxysubsubsection{\texorpdfstring{TWO\_BYTES}{TWO\_BYTES}}
+{\footnotesize\ttfamily \#define TWO\+\_\+\+BYTES~0x\+E0}
+
+\mbox{\Hypertarget{mouse_2i8042_8h_aa554763d6a066605edecacdea834da9b}\label{mouse_2i8042_8h_aa554763d6a066605edecacdea834da9b}} 
+\index{mouse/i8042.h@{mouse/i8042.h}!WAIT\_KBC@{WAIT\_KBC}}
+\index{WAIT\_KBC@{WAIT\_KBC}!mouse/i8042.h@{mouse/i8042.h}}
+\doxysubsubsection{\texorpdfstring{WAIT\_KBC}{WAIT\_KBC}}
+{\footnotesize\ttfamily \#define WAIT\+\_\+\+KBC~20000}
+

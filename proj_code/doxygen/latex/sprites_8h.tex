@@ -1,0 +1,113 @@
+\hypertarget{sprites_8h}{}\doxysection{sprites.\+h File Reference}
+\label{sprites_8h}\index{sprites.h@{sprites.h}}
+{\ttfamily \#include \char`\"{}../devices/video/video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../devices/video/\+VBE.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../images/\+Initial\+Menu.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../images/border.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../images/ball.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../images/obstacle.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../images/instructions\+FIrst.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../images/middle.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../images/hole.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../images/mouse.\+xpm\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_sprite}{Sprite}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sprites_8h_aeb21c7ac080eea985b7701df626d9cf4}{MAX\+\_\+\+SPRITES}}~8
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_sprite}{Sprite}} \mbox{\hyperlink{sprites_8h_abb1060e0b7ecf8b4eba2c1bb55cfe5e2}{Sprite}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{sprites_8h_a3fc1965bb7f45fd72fff8a402c507186}{draw\+Sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sprite, int \mbox{\hyperlink{mouse_8c_a6150e0515f7202e2fb518f7206ed97dc}{x}}, int \mbox{\hyperlink{mouse_8c_a0a2f84ed7838f07779ae24c5a9086d33}{y}})
+\begin{DoxyCompactList}\small\item\em Draws a sprite on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sprites_8h_ab089535fedd4902b5d0c870d711e4e93}{create\+Sprite\+Arr}} ()
+\begin{DoxyCompactList}\small\item\em Create the sprites and store them on the array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sprites_8h_ad2e7708e11fbd6921fc7ae5eb80babad}{clean\+Sprites\+Arr}} ()
+\begin{DoxyCompactList}\small\item\em Cleans up the array of sprites. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprites_8h_afa9fd6de06e462f1ae78b4862e69fe69}{sprites}} \mbox{[}\mbox{\hyperlink{sprites_8h_aeb21c7ac080eea985b7701df626d9cf4}{MAX\+\_\+\+SPRITES}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sprites_8h_aeb21c7ac080eea985b7701df626d9cf4}\label{sprites_8h_aeb21c7ac080eea985b7701df626d9cf4}} 
+\index{sprites.h@{sprites.h}!MAX\_SPRITES@{MAX\_SPRITES}}
+\index{MAX\_SPRITES@{MAX\_SPRITES}!sprites.h@{sprites.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_SPRITES}{MAX\_SPRITES}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+SPRITES~8}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{sprites_8h_abb1060e0b7ecf8b4eba2c1bb55cfe5e2}\label{sprites_8h_abb1060e0b7ecf8b4eba2c1bb55cfe5e2}} 
+\index{sprites.h@{sprites.h}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!sprites.h@{sprites.h}}
+\doxysubsubsection{\texorpdfstring{Sprite}{Sprite}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_sprite}{Sprite}} \mbox{\hyperlink{struct_sprite}{Sprite}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sprites_8h_ad2e7708e11fbd6921fc7ae5eb80babad}\label{sprites_8h_ad2e7708e11fbd6921fc7ae5eb80babad}} 
+\index{sprites.h@{sprites.h}!cleanSpritesArr@{cleanSpritesArr}}
+\index{cleanSpritesArr@{cleanSpritesArr}!sprites.h@{sprites.h}}
+\doxysubsubsection{\texorpdfstring{cleanSpritesArr()}{cleanSpritesArr()}}
+{\footnotesize\ttfamily void clean\+Sprites\+Arr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cleans up the array of sprites. 
+
+\mbox{\Hypertarget{sprites_8h_ab089535fedd4902b5d0c870d711e4e93}\label{sprites_8h_ab089535fedd4902b5d0c870d711e4e93}} 
+\index{sprites.h@{sprites.h}!createSpriteArr@{createSpriteArr}}
+\index{createSpriteArr@{createSpriteArr}!sprites.h@{sprites.h}}
+\doxysubsubsection{\texorpdfstring{createSpriteArr()}{createSpriteArr()}}
+{\footnotesize\ttfamily void create\+Sprite\+Arr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create the sprites and store them on the array. 
+
+\mbox{\Hypertarget{sprites_8h_a3fc1965bb7f45fd72fff8a402c507186}\label{sprites_8h_a3fc1965bb7f45fd72fff8a402c507186}} 
+\index{sprites.h@{sprites.h}!drawSprite@{drawSprite}}
+\index{drawSprite@{drawSprite}!sprites.h@{sprites.h}}
+\doxysubsubsection{\texorpdfstring{drawSprite()}{drawSprite()}}
+{\footnotesize\ttfamily int draw\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sprite,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Draws a sprite on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & Pointer to the sprite structure containing the sprite data.\\
+\hline
+{\em x} & The x-\/coordinate of the top-\/left corner of the sprite on the screen.\\
+\hline
+{\em y} & The y-\/coordinate of the top-\/left corner of the sprite on the screen.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero if there was an error drawing the sprite. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{sprites_8h_afa9fd6de06e462f1ae78b4862e69fe69}\label{sprites_8h_afa9fd6de06e462f1ae78b4862e69fe69}} 
+\index{sprites.h@{sprites.h}!sprites@{sprites}}
+\index{sprites@{sprites}!sprites.h@{sprites.h}}
+\doxysubsubsection{\texorpdfstring{sprites}{sprites}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ sprites\mbox{[}\mbox{\hyperlink{sprites_8h_aeb21c7ac080eea985b7701df626d9cf4}{MAX\+\_\+\+SPRITES}}\mbox{]}}
+
