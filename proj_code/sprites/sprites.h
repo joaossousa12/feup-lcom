@@ -11,6 +11,7 @@
 #include "../imgs/middle.xpm"
 #include "../imgs/hole.xpm"
 
+
 typedef struct Sprite{
     uint32_t *colors;
     uint16_t height, width;
