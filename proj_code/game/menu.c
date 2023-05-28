@@ -19,10 +19,15 @@ void process_keyboard_menu(uint8_t scancode){
     switch (scancode) {
         case MAKE_1:
             gameMode = GAME_MODE;
+            break;
         case MAKE_2:
             gameMode = INSTRUCTIONS_MODE;
+            break;
         case MAKE_3:
             gameMode = EXIT_MODE;
+            break;
+        default:
+            break;
     }
 }
 

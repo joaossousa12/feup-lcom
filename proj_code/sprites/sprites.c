@@ -39,13 +39,12 @@ int drawSprite(Sprite *sprite, int x, int y){
             if (draw_pixel(x + w, y + h, sprite->colors[w + h*width])) return 1;
         }
     }
-    printf("done sprite");
     return 0; 
 }
 
 void loadSprites(){
     InitialMenu = createSprite((xpm_map_t) InitialMenu_xpm);
-    instructionsFIrst = createSprite((xpm_map_t) instructionsFIrst_xpm);
+    instructionsFirst = createSprite((xpm_map_t) instructionsFIrst_xpm);
     border = createSprite((xpm_map_t) border_xpm);
     middle = createSprite((xpm_map_t) middle_xpm);
     obstacle = createSprite((xpm_map_t) obstacle_xpm);
@@ -55,7 +54,7 @@ void loadSprites(){
 
 void unloadSprites(){
     destroy_sprite(InitialMenu);
-    destroy_sprite(instructionsFIrst);
+    destroy_sprite(instructionsFirst);
     destroy_sprite(border);
     destroy_sprite(middle);
     destroy_sprite(obstacle);

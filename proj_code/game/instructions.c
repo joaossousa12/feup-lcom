@@ -9,7 +9,7 @@
 extern int gameMode;
 
 int drawInstructionsPage(){
-    //copyDrawingToBuffer();
+    drawSprite(instructionsFirst,0,0);
     return 0;
 }
 
