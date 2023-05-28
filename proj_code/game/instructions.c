@@ -3,13 +3,13 @@
 //
 
 #include "instructions.h"
-#include "../MACROS.h"
-#include "../devices/keyboard/i8042.h"
 
 extern int gameMode;
+extern uint8_t *frame_buffer;
+extern vbe_mode_info_t mode_info;
 
 int drawInstructionsPage(){
-    drawSprite(instructionsFirst,0,0);
+    drawSprite(instructionsFIrst, 0, 0);
     return 0;
 }
 
