@@ -18,6 +18,7 @@ extern int y;
 
 extern int xBall;
 extern int yBall;
+extern int direction;
 
 extern struct packet mouse_packet;
 extern uint8_t bytes[3];
@@ -92,8 +93,24 @@ int (proj_main_loop)(int argc, char *argv[])
               else if (gameMode == GAME_MODE){
                   copyToAuxiliarBuffer();
                   drawSprite(ball,xBall,yBall);
-                  yBall++;
-                  xBall++;
+                  checkIfBallInHole();
+                  switch (direction) {
+                      case 0:
+                          xBall++;
+                          break;
+                      case 1:
+                          yBall--;
+                          break;
+                      case 2:
+                          xBall--;
+                          break;
+                      case 3:
+                          yBall++;
+                          break;
+                      default:
+                          break;
+                  }
+                  process_collision();
               }
               else if (gameMode == INSTRUCTIONS_MODE){
                   if(drawInstructionsPage()) return 1;
@@ -112,17 +129,31 @@ int (proj_main_loop)(int argc, char *argv[])
               mouse_ih();
               mouse_sync();
               if(current_index == 3){
-                current_index = 0;
-                to_packet();
-                refresh_mouse_location();
-                /*if(gameMode == GAME_MODE){
-                  if(mouse_packet.lb){
-                    // drag ball
+                    current_index = 0;
+                    to_packet();
+                    refresh_mouse_location();
+                    //TO BE IMPLEMENTED WHEN DRAWING MOUSE SPRITE
+                    /*if(gameMode == GAME_MODE) {         //VERIFY GAME LOOP cause after processin the shot cant register another one cause there is no loop
+                      if(mouse_packet.lb && ball_clicked_verify(ball_pos_X, ball_pos_y, mouse_state)){
+                          bool hold_mouse_lb = true;
+                          while (hold_mouse_lb)
+                          {
+                              mouse_ih();
+                              mouse_sync();
+                              mouse_position_update();
+                              if(!mouse_packet.lb){
+                                  if((delta_x == 0) && (delta_y == 0)) // not finished yet
+                                      process_tacada_MOUSE (mouse_packet.delta_x,mouse_packet.delta_y);
+                                  hold_mouse_lb = false;
+                              }
+                          }
+
+                      }
+                      */
                   }
-                }*/
+              if(mouse_packet.lb) process_tacada_MOUSE(0,0);
+
               }
-              //printf("Mouse interrupted");
-          }
       }
     }
   }

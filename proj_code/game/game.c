@@ -13,6 +13,9 @@ extern int y;
 
 int xBall;
 int yBall;
+int xHole = 680;
+int yHole = 45;
+int direction;
 
 void (drawMouse)(){
     if(gameMode == GAME_MODE)
@@ -20,6 +23,7 @@ void (drawMouse)(){
 }
 
 int drawGame(){
+    direction = 0;
     int i = 0;
     xBall = 50;
     yBall = 550;
@@ -62,7 +66,7 @@ int drawGame(){
         }
         i++;
     }
-    drawSprite(hole, 680, 45);
+    drawSprite(hole, xHole, yHole);
     memcpy(auxiliar_buffer,frame_buffer,width * height * bytesPerPixel);
     return 0;
 }
@@ -78,8 +82,19 @@ void process_keyboard_game(uint8_t scancode){
     }
 }
 
-void process_tacada_MOUSE (uint8_t x,uint8_t y){
-
+void checkIfBallInHole(){
+    if((xBall-xHole <=18 && xBall-xHole >=-18) && (yBall-yHole <=18 && yBall - yHole >=-18)){
+        gameMode = MENU_MODE;
+        memset(auxiliar_buffer, 0 ,width * height * bytesPerPixel);
+    }
 }
 
+void process_tacada_MOUSE (uint8_t x,uint8_t y){
+    direction++;
+    if(direction==4) direction=0;
+}
+
+void process_collision(){
+    //TODO
+}
 
