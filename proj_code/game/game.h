@@ -3,11 +3,14 @@
 #define PROJ_GAME_H
 
 #include <lcom/lcf.h>
+#include <stdio.h>
+#include <string.h>
 
 #include "../devices/keyboard/i8042.h"
 #include "../devices/video/video.h"
 #include "../sprites/sprites.h"
 #include "../devices/mouse/mouse.h"
+#include "../MACROS.h"
 
 int drawGame();
 
