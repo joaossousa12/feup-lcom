@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "*.embeddedhtml": "html",
-        "*.xpm": "c"
+        "*.xpm": "c",
+        "i8042.h": "c"
     }
 }

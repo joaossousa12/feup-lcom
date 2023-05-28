@@ -8,5 +8,6 @@
 #define MENU_MODE 0
 #define GAME_MODE 1
 #define INSTRUCTIONS_MODE 2
+#define EXIT_MODE 3
 
 #endif //PROJ_MACROS_H

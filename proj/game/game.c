@@ -1,5 +1,6 @@
 #include "game.h"
 
+extern int gameMode;
 extern uint8_t *frame_buffer;
 extern vbe_mode_info_t mode_info;
 
@@ -51,7 +52,14 @@ int drawGame(){
 }
 
 void process_keyboard_game(uint8_t scancode){
+    switch (scancode) {
+        case MAKE_ESC:
+            gameMode = MENU_MODE;
+            break;
+        default:
+            break;
 
+    }
 }
 
 void process_tacada_MOUSE (uint8_t x,uint8_t y){
