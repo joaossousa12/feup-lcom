@@ -19,6 +19,7 @@ void process_keyboard_menu(uint8_t scancode){
     switch (scancode) {
         case MAKE_1:
             gameMode = GAME_MODE;
+            drawGame();
             break;
         case MAKE_2:
             gameMode = INSTRUCTIONS_MODE;

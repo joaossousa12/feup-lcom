@@ -27,4 +27,6 @@ void allocateSpaceBuffer();
 
 void videoSet();
 
+void copyToAuxiliarBuffer();
+
 #endif //SRC_VIDEO_H

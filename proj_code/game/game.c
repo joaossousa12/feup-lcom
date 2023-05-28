@@ -1,8 +1,12 @@
-#include "game.h"
+ #include "game.h"
 
 extern int gameMode;
 extern uint8_t *frame_buffer;
+extern uint8_t *auxiliar_buffer;
 extern vbe_mode_info_t mode_info;
+extern uint16_t width;
+extern uint16_t height;
+extern unsigned bytesPerPixel;
 
 extern int x;
 extern int y;
@@ -55,6 +59,7 @@ int drawGame(){
     }
     drawSprite(hole, 680, 45);
     drawSprite(ball, 50, 550);
+    memcpy(auxiliar_buffer,frame_buffer,width * height * bytesPerPixel);
     return 0;
 }
 

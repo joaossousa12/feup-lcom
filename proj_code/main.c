@@ -86,7 +86,7 @@ int (proj_main_loop)(int argc, char *argv[])
                   if(drawMenu()) return 1;
               }
               else if (gameMode == GAME_MODE){
-                  if(drawGame()) return 1;
+                  copyToAuxiliarBuffer();
               }
               else if (gameMode == INSTRUCTIONS_MODE){
                   if(drawInstructionsPage()) return 1;

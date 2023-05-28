@@ -14,6 +14,7 @@
 #include "../sprites/sprites.h"
 #include "../devices/mouse/mouse.h"
 #include "../MACROS.h"
+#include "game.h"
 
 int drawMenu();
 

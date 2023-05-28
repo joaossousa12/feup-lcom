@@ -2,6 +2,7 @@
 
 vbe_mode_info_t mode_info;
 uint8_t *frame_buffer;
+uint8_t *auxiliar_buffer;
 uint16_t width, height;
 
 unsigned int frame_size;
@@ -88,8 +89,14 @@ void clearBuffer(){
 void allocateSpaceBuffer(){
     frame_buffer = (uint8_t *)malloc(width * height * bytesPerPixel);
     memset(frame_buffer, 0xDDDDDD, width * height * bytesPerPixel);
+    auxiliar_buffer = (uint8_t *)malloc(width * height * bytesPerPixel);
+    memset(auxiliar_buffer, 0xDDDDDD, width * height * bytesPerPixel);
 }
 
 void videoSet(){
     memcpy (baseAddress , frame_buffer, width * height * bytesPerPixel);
+}
+
+void copyToAuxiliarBuffer(){
+    memcpy (frame_buffer , auxiliar_buffer, width * height * bytesPerPixel);
 }
