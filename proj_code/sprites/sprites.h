@@ -13,16 +13,6 @@
 
 #include "../devices/video/video.h"
 #include "../devices/video/VBE.h"
-<<<<<<< HEAD
-#include "../imgs/InitialMenu.xpm"
-#include "../imgs/border.xpm"
-#include "../imgs/ball.xpm"
-#include "../imgs/obstacle.xpm"
-#include "../imgs/instructionsFIrst.xpm"
-#include "../imgs/middle.xpm"
-#include "../imgs/hole.xpm"
-#include "../imgs/mouse.xpm"
-=======
 
 #include "../images/InitialMenu.xpm"
 #include "../images/border.xpm"
@@ -34,33 +24,12 @@
 #include "../images/mouse.xpm"
 
 #define MAX_SPRITES 8
->>>>>>> 89413b28e9ef45364418a97d373bd3a8ba9808a8
 
 typedef struct Sprite{
-    uint32_t *colors;
+    uint32_t *pixels;
     uint16_t height, width;
 } Sprite;
 
-<<<<<<< HEAD
-Sprite *InitialMenu;
-Sprite *instructionsFirst;
-Sprite *border;
-Sprite *middle;
-Sprite *obstacle;
-Sprite *hole;
-Sprite *ball;
-Sprite *mouse;
-
-Sprite *createSprite(xpm_map_t xpmMap);
-
-int drawSprite(Sprite *sprite, int x, int y);
-
-void destroy_sprite(Sprite *sprite);
-
-void loadSprites();
-
-void unloadSprites();
-=======
 Sprite *sprites[MAX_SPRITES]; // sprite's array
 
 /**
@@ -88,7 +57,6 @@ void createSpriteArr();
 */
 
 void cleanSpritesArr();
->>>>>>> 89413b28e9ef45364418a97d373bd3a8ba9808a8
 
 #endif
 

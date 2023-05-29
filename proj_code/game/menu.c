@@ -8,10 +8,12 @@ extern vbe_mode_info_t mode_info;
 extern uint16_t width,height;
 extern unsigned bytesPerPixel;
 
+extern Sprite *sprites[MAX_SPRITES];
+
 
 int drawMenu(){
     memset(frame_buffer, 0xFFFFFF, width * height * bytesPerPixel);
-    if(drawSprite(InitialMenu, 0, 0)) return 1;
+    if(drawSprite(sprites[0], 0, 0)) return 1;
     return 0;
 }
 
