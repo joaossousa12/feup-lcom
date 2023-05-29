@@ -47,15 +47,39 @@ void process_keyboard_game(uint8_t scancode);
 
 /**
  * @brief Function that will process a ball swing.
- * 
- * @param x 
- * 
- * @param y
 */
 
-void process_tacada_MOUSE (uint8_t x, uint8_t y);
+void process_tacada_MOUSE ();
+
+/**
+ * @brief Function that will check if the ball is in the hole
+*/
 
 void checkIfBallInHole();
+
+/**
+ * @brief Will check if ball as a collision with a border in the x side.
+ * 
+ * @param xbola x coordinate of ball
+ * 
+ * @param ybola y coordinate of ball
+ * 
+ * @return true if collision false otherwise
+*/
+
+bool checkColisionx(int xbola, int ybola);
+
+/**
+ * @brief Will check if ball as a collision with a border in the y side.
+ * 
+ * @param xbola x coordinate of ball
+ * 
+ * @param ybola y coordinate of ball
+ * 
+ * @return true if collision false otherwise
+*/
+
+bool checkColisiony(int xbola, int ybola);
 
 #endif //PROJ_GAME_H
 

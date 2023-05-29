@@ -27,6 +27,7 @@ extern uint8_t bytes[3];
 extern int current_index;
 extern int xBall, yBall, direction;
 extern Sprite *sprites[MAX_SPRITES];
+extern int tempx, tempy, counter;
 
 extern uint8_t scancode;
 
@@ -89,30 +90,40 @@ int (proj_main_loop)(int argc, char *argv[])
       switch(_ENDPOINT_P(msg.m_source)) {
         case HARDWARE:
           if (msg.m_notify.interrupts & 1) {
-              if (gameMode == MENU_MODE){
-                  if(drawMenu()) return 1;
-              }
-              else if (gameMode == GAME_MODE){
+              if (gameMode == MENU_MODE) {
+                  if (drawMenu()) return 1;
+              } else if (gameMode == GAME_MODE) {
                   copyToAuxiliarBuffer();
-                  drawSprite(sprites[6],xBall,yBall);
+                  drawSprite(sprites[6], xBall, yBall);
                   checkIfBallInHole();
                   switch (direction) {
                       case 0:
-                          xBall++;
+                          xBall+=4;
                           break;
                       case 1:
-                          yBall--;
+                          yBall-=4;
                           break;
                       case 2:
-                          xBall--;
+                          xBall-=4;
                           break;
                       case 3:
-                          yBall++;
+                          yBall+=4;
                           break;
                       default:
                           break;
                   }
-              }
+                  if(checkColisionx(xBall, yBall) && checkColisiony(xBall, yBall)){
+                      direction -= 2;
+                  }
+                  else if (checkColisionx(xBall, yBall)) {
+                      direction -= 2;
+                  } 
+                  else if (checkColisiony(xBall, yBall)) {
+                      direction -= 2;
+                  }
+                  if(direction==-1) direction=3;
+                  else if(direction==-2) direction=2;
+                }
               else if (gameMode == INSTRUCTIONS_MODE){
                   if(drawInstructionsPage()) return 1;
               }
@@ -133,7 +144,7 @@ int (proj_main_loop)(int argc, char *argv[])
                 current_index = 0;
                 to_packet();
                 refresh_mouse_location();
-                if(mouse_packet.lb) process_tacada_MOUSE(0,0);
+                if(mouse_packet.lb) process_tacada_MOUSE();
               }
           }
       }

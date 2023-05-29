@@ -1,4 +1,4 @@
- #include "game.h"
+#include "game.h"
 
 extern int gameMode;
 extern uint8_t *frame_buffer;
@@ -18,6 +18,10 @@ int yBall;
 int direction;
 int xHole = 680;
 int yHole = 45;
+
+int counter;
+int tempx;
+int tempy;
 
 
 void (drawMouse)(){
@@ -92,9 +96,30 @@ void checkIfBallInHole(){
     }
 }
 
-void process_tacada_MOUSE (uint8_t x,uint8_t y){
+bool checkColisiony(int xbola, int ybola){
+    if((ybola <= 10 || ybola + 10 >= (mode_info.YResolution - 11))) return true;
+    else if((ybola == 462 || ybola == 522) && ((xbola >= 10 && xbola <= 225) || (xbola >= 400 && xbola <= 610))) return true;
+    else if((ybola == 422 || ybola == 350) && ((xbola >= 320 && xbola <= 590) || (xbola >= 630 && xbola <= 740))) return true;
+    else if(ybola == 342 && (xbola >= 100 && xbola <= 225)) return true;
+    else if(ybola == 282 && (xbola >= 300 && xbola <= 380)) return true;
+    else if(ybola == 242 && (xbola >= 670 && xbola <= 730)) return true;
+    else if(ybola == 142 && (xbola >= 550 && xbola <= 790)) return true;
+    else if(ybola == 102 && ((xbola >= 550 && xbola <= 790) || (xbola >= 100 && xbola <= 225))) return true;
+    else return false;
+}
+
+bool checkColisionx(int xbola, int ybola){
+    if((xbola <= 10 || xbola + 32 >= (mode_info.XResolution - 11))) return true;
+    else if((xbola == 102 || xbola == 226 || xbola == 402 || xbola == 610) && (ybola >= 460 && ybola <= 520)) return true;
+    else if((xbola == 302 || xbola == 590 || xbola == 630 || xbola == 740) && (ybola >= 350 && ybola <= 420))return true;
+    else if((xbola == 102 || xbola == 226) && (ybola >= 100 && ybola <= 340))return true;
+    else if((xbola == 302 || xbola == 382) && (ybola >= 10 && ybola <= 280))return true;
+    else if(xbola == 550 && (ybola >= 100 && ybola <= 140)) return true;
+    else if((xbola == 670 || xbola == 730) && (ybola >= 100 && ybola <= 140))return true;
+    else return false;
+}
+
+void process_tacada_MOUSE (){
     direction++;
     if(direction==4) direction=0;
 }
-
-
