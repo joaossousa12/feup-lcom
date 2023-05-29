@@ -22,14 +22,11 @@ extern vbe_mode_info_t mode_info;
 
 extern int x;
 extern int y;
-
-extern int xBall;
-extern int yBall;
-extern int direction;
-
 extern struct packet mouse_packet;
 extern uint8_t bytes[3];
 extern int current_index;
+extern int xBall, yBall, direction;
+extern Sprite *sprites[MAX_SPRITES];
 
 extern uint8_t scancode;
 
@@ -52,13 +49,13 @@ int (main)(int argc, char *argv[])
 int beforeLoop(){
     if(set_frame_buffer(0x115)) return 1;
     if(set_graphic_mode(0x115)) return 1;
-    loadSprites();
+    createSpriteArr();
     allocateSpaceBuffer();
     return 0;
 }
 
 int afterLoop(){
-    unloadSprites();
+    cleanSpritesArr();
     if(vg_exit()!=0) return 1;
     return 0;
 }
@@ -97,7 +94,7 @@ int (proj_main_loop)(int argc, char *argv[])
               }
               else if (gameMode == GAME_MODE){
                   copyToAuxiliarBuffer();
-                  drawSprite(ball,xBall,yBall);
+                  drawSprite(sprites[6],xBall,yBall);
                   checkIfBallInHole();
                   switch (direction) {
                       case 0:
@@ -115,7 +112,6 @@ int (proj_main_loop)(int argc, char *argv[])
                       default:
                           break;
                   }
-                  process_collision();
               }
               else if (gameMode == INSTRUCTIONS_MODE){
                   if(drawInstructionsPage()) return 1;
@@ -134,35 +130,12 @@ int (proj_main_loop)(int argc, char *argv[])
               mouse_ih();
               mouse_sync();
               if(current_index == 3){
-                    current_index = 0;
-                    to_packet();
-                    refresh_mouse_location();
-                    //TO BE IMPLEMENTED WHEN DRAWING MOUSE SPRITE
-                    /*if(gameMode == GAME_MODE) {         //VERIFY GAME LOOP cause after processin the shot cant register another one cause there is no loop
-                      if(mouse_packet.lb && ball_clicked_verify(ball_pos_X, ball_pos_y, mouse_state)){
-                          bool hold_mouse_lb = true;
-                          while (hold_mouse_lb)
-                          {
-                              mouse_ih();
-                              mouse_sync();
-                              mouse_position_update();
-                              if(!mouse_packet.lb){
-                                  if((delta_x == 0) && (delta_y == 0)) // not finished yet
-                                      process_tacada_MOUSE (mouse_packet.delta_x,mouse_packet.delta_y);
-                                  hold_mouse_lb = false;
-                              }
-                          }
-
-                      }
-                      */
-                  }
-              if(mouse_packet.lb) process_tacada_MOUSE(0,0);
-
+                current_index = 0;
+                to_packet();
+                refresh_mouse_location();
+                if(mouse_packet.lb) process_tacada_MOUSE(0,0);
               }
-<<<<<<< HEAD
-=======
           }
->>>>>>> 89413b28e9ef45364418a97d373bd3a8ba9808a8
       }
     }
   }

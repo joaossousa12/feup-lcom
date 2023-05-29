@@ -57,7 +57,5 @@ void process_tacada_MOUSE (uint8_t x, uint8_t y);
 
 void checkIfBallInHole();
 
-void process_collision();
-
 #endif //PROJ_GAME_H
 

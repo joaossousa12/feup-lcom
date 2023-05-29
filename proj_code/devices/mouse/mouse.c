@@ -16,8 +16,8 @@ uint16_t delta_x;
 uint16_t delta_y;
 
 int current_index = 0;
-int x = 10;
-int y = 10;
+int x = 11;
+int y = 11;
 
 
 int (mouse_subscribe_int)(){
@@ -83,17 +83,17 @@ int (mouse_write)(uint8_t command) {
 
 void (refresh_mouse_location)(){
     // refresh x
-    if(mouse_packet.delta_x + x < 0 && !mouse_packet.x_ov)
-        x = 0;
-    else if(mouse_packet.delta_x + x > 770 && !mouse_packet.x_ov)
-        x = 770;
+    if(mouse_packet.delta_x + x < 11 && !mouse_packet.x_ov)
+        x = 11;
+    else if(mouse_packet.delta_x + x > 769 && !mouse_packet.x_ov)
+        x = 769;
     else if(!mouse_packet.x_ov)
         x += mouse_packet.delta_x;
     // refresh y
-    if(y - mouse_packet.delta_y < 0 && !mouse_packet.y_ov)
-        y = 0;
-    else if(y - mouse_packet.delta_y > 570 && !mouse_packet.y_ov)
-        y = 570;
+    if(y - mouse_packet.delta_y < 11 && !mouse_packet.y_ov)
+        y = 11;
+    else if(y - mouse_packet.delta_y > 569 && !mouse_packet.y_ov)
+        y = 569;
     else if(!mouse_packet.y_ov)
         y -= mouse_packet.delta_y;    
 }
