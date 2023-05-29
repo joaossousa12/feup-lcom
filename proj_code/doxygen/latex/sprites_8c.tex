@@ -1,0 +1,98 @@
+\hypertarget{sprites_8c}{}\doxysection{sprites.\+c File Reference}
+\label{sprites_8c}\index{sprites.c@{sprites.c}}
+{\ttfamily \#include \char`\"{}sprites.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdlib.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sprites_8c_ab089535fedd4902b5d0c870d711e4e93}{create\+Sprite\+Arr}} ()
+\begin{DoxyCompactList}\small\item\em Create the sprites and store them on the array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sprites_8c_ad2e7708e11fbd6921fc7ae5eb80babad}{clean\+Sprites\+Arr}} ()
+\begin{DoxyCompactList}\small\item\em Cleans up the array of sprites. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sprites_8c_a3fc1965bb7f45fd72fff8a402c507186}{draw\+Sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sprite, int \mbox{\hyperlink{mouse_8c_a6150e0515f7202e2fb518f7206ed97dc}{x}}, int \mbox{\hyperlink{mouse_8c_a0a2f84ed7838f07779ae24c5a9086d33}{y}})
+\begin{DoxyCompactList}\small\item\em Draws a sprite on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{sprites_8c_aa535a3201e6b21c12dc05f4fa9a3e7c2}{game\+Mode}}
+\begin{DoxyCompactList}\small\item\em Mini\+X-\/\+Golf. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sprites_8c_a6150e0515f7202e2fb518f7206ed97dc}{x}}
+\item 
+int \mbox{\hyperlink{sprites_8c_a0a2f84ed7838f07779ae24c5a9086d33}{y}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sprites_8c_ad2e7708e11fbd6921fc7ae5eb80babad}\label{sprites_8c_ad2e7708e11fbd6921fc7ae5eb80babad}} 
+\index{sprites.c@{sprites.c}!cleanSpritesArr@{cleanSpritesArr}}
+\index{cleanSpritesArr@{cleanSpritesArr}!sprites.c@{sprites.c}}
+\doxysubsubsection{\texorpdfstring{cleanSpritesArr()}{cleanSpritesArr()}}
+{\footnotesize\ttfamily void clean\+Sprites\+Arr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cleans up the array of sprites. 
+
+\mbox{\Hypertarget{sprites_8c_ab089535fedd4902b5d0c870d711e4e93}\label{sprites_8c_ab089535fedd4902b5d0c870d711e4e93}} 
+\index{sprites.c@{sprites.c}!createSpriteArr@{createSpriteArr}}
+\index{createSpriteArr@{createSpriteArr}!sprites.c@{sprites.c}}
+\doxysubsubsection{\texorpdfstring{createSpriteArr()}{createSpriteArr()}}
+{\footnotesize\ttfamily void create\+Sprite\+Arr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create the sprites and store them on the array. 
+
+\mbox{\Hypertarget{sprites_8c_a3fc1965bb7f45fd72fff8a402c507186}\label{sprites_8c_a3fc1965bb7f45fd72fff8a402c507186}} 
+\index{sprites.c@{sprites.c}!drawSprite@{drawSprite}}
+\index{drawSprite@{drawSprite}!sprites.c@{sprites.c}}
+\doxysubsubsection{\texorpdfstring{drawSprite()}{drawSprite()}}
+{\footnotesize\ttfamily int draw\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sprite,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Draws a sprite on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & Pointer to the sprite structure containing the sprite data.\\
+\hline
+{\em x} & The x-\/coordinate of the top-\/left corner of the sprite on the screen.\\
+\hline
+{\em y} & The y-\/coordinate of the top-\/left corner of the sprite on the screen.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero if there was an error drawing the sprite. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{sprites_8c_aa535a3201e6b21c12dc05f4fa9a3e7c2}\label{sprites_8c_aa535a3201e6b21c12dc05f4fa9a3e7c2}} 
+\index{sprites.c@{sprites.c}!gameMode@{gameMode}}
+\index{gameMode@{gameMode}!sprites.c@{sprites.c}}
+\doxysubsubsection{\texorpdfstring{gameMode}{gameMode}}
+{\footnotesize\ttfamily int game\+Mode\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Mini\+X-\/\+Golf. 
+
+\begin{DoxyAuthor}{Author}
+João Pedro Sousa, Bernardo Pinto, Carlos Madaleno
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/05/2023 
+\end{DoxyDate}
+\mbox{\Hypertarget{sprites_8c_a6150e0515f7202e2fb518f7206ed97dc}\label{sprites_8c_a6150e0515f7202e2fb518f7206ed97dc}} 
+\index{sprites.c@{sprites.c}!x@{x}}
+\index{x@{x}!sprites.c@{sprites.c}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily int x\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{sprites_8c_a0a2f84ed7838f07779ae24c5a9086d33}\label{sprites_8c_a0a2f84ed7838f07779ae24c5a9086d33}} 
+\index{sprites.c@{sprites.c}!y@{y}}
+\index{y@{y}!sprites.c@{sprites.c}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily int y\hspace{0.3cm}{\ttfamily [extern]}}
+

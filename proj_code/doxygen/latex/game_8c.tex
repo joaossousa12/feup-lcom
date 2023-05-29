@@ -1,0 +1,168 @@
+\hypertarget{game_8c}{}\doxysection{game.\+c File Reference}
+\label{game_8c}\index{game.c@{game.c}}
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \mbox{\hyperlink{game_8c_aa632458efe74b5b5009fab6cf993fdb2}{draw\+Mouse}} ()
+\begin{DoxyCompactList}\small\item\em this function draws the mouse on the screen at a (x, y) position based on the xpm \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8c_a5168cff9fafb04804124bc87ec462858}{draw\+Game}} ()
+\begin{DoxyCompactList}\small\item\em this function draws the game menu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_a95babf722b8475e8e28e5468baa73c6c}{process\+\_\+keyboard\+\_\+game}} (uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_aa1de7a5557e9d96b83cf03f73c92163f}{scancode}})
+\begin{DoxyCompactList}\small\item\em Processes keyboard input from the user and changes view based on it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_ae927e3281f320abe0337905e86b0f0f5}{process\+\_\+tacada\+\_\+\+MOUSE}} (uint8\+\_\+t \mbox{\hyperlink{mouse_8c_a6150e0515f7202e2fb518f7206ed97dc}{x}}, uint8\+\_\+t \mbox{\hyperlink{mouse_8c_a0a2f84ed7838f07779ae24c5a9086d33}{y}})
+\begin{DoxyCompactList}\small\item\em Function that will process a ball swing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{game_8c_aa535a3201e6b21c12dc05f4fa9a3e7c2}{game\+Mode}}
+\begin{DoxyCompactList}\small\item\em Mini\+X-\/\+Golf. \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{game_8c_aca42f7778287b9a79affe540ce98d0f5}{frame\+\_\+buffer}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{game_8c_abdf185576c4e377f8e97d7eb4a2fa0b1}{auxiliar\+\_\+buffer}}
+\item 
+vbe\+\_\+mode\+\_\+info\+\_\+t \mbox{\hyperlink{game_8c_a9fcc2243068f8e628648febc0909c509}{mode\+\_\+info}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{game_8c_ad0eab1042455a2067c812ab8071d5376}{width}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{game_8c_a81c9f8d0b8c3b49d770be14dbe9f0d37}{height}}
+\item 
+unsigned \mbox{\hyperlink{game_8c_ab6fe70cf55b50ced7fea8ddf93e629e8}{bytes\+Per\+Pixel}}
+\item 
+int \mbox{\hyperlink{game_8c_a6150e0515f7202e2fb518f7206ed97dc}{x}}
+\item 
+int \mbox{\hyperlink{game_8c_a0a2f84ed7838f07779ae24c5a9086d33}{y}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{game_8c_afa9fd6de06e462f1ae78b4862e69fe69}{sprites}} \mbox{[}\mbox{\hyperlink{sprites_8h_aeb21c7ac080eea985b7701df626d9cf4}{MAX\+\_\+\+SPRITES}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game_8c_a5168cff9fafb04804124bc87ec462858}\label{game_8c_a5168cff9fafb04804124bc87ec462858}} 
+\index{game.c@{game.c}!drawGame@{drawGame}}
+\index{drawGame@{drawGame}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{drawGame()}{drawGame()}}
+{\footnotesize\ttfamily int draw\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function draws the game menu 
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8c_aa632458efe74b5b5009fab6cf993fdb2}\label{game_8c_aa632458efe74b5b5009fab6cf993fdb2}} 
+\index{game.c@{game.c}!drawMouse@{drawMouse}}
+\index{drawMouse@{drawMouse}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{drawMouse()}{drawMouse()}}
+{\footnotesize\ttfamily void() draw\+Mouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function draws the mouse on the screen at a (x, y) position based on the xpm 
+
+\mbox{\Hypertarget{game_8c_a95babf722b8475e8e28e5468baa73c6c}\label{game_8c_a95babf722b8475e8e28e5468baa73c6c}} 
+\index{game.c@{game.c}!process\_keyboard\_game@{process\_keyboard\_game}}
+\index{process\_keyboard\_game@{process\_keyboard\_game}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{process\_keyboard\_game()}{process\_keyboard\_game()}}
+{\footnotesize\ttfamily void process\+\_\+keyboard\+\_\+game (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scancode }\end{DoxyParamCaption})}
+
+
+
+Processes keyboard input from the user and changes view based on it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scancode} & represents the key pressed by the user \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{game_8c_ae927e3281f320abe0337905e86b0f0f5}\label{game_8c_ae927e3281f320abe0337905e86b0f0f5}} 
+\index{game.c@{game.c}!process\_tacada\_MOUSE@{process\_tacada\_MOUSE}}
+\index{process\_tacada\_MOUSE@{process\_tacada\_MOUSE}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{process\_tacada\_MOUSE()}{process\_tacada\_MOUSE()}}
+{\footnotesize\ttfamily void process\+\_\+tacada\+\_\+\+MOUSE (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{x,  }\item[{uint8\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+Function that will process a ball swing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{game_8c_abdf185576c4e377f8e97d7eb4a2fa0b1}\label{game_8c_abdf185576c4e377f8e97d7eb4a2fa0b1}} 
+\index{game.c@{game.c}!auxiliar\_buffer@{auxiliar\_buffer}}
+\index{auxiliar\_buffer@{auxiliar\_buffer}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{auxiliar\_buffer}{auxiliar\_buffer}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ auxiliar\+\_\+buffer\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{game_8c_ab6fe70cf55b50ced7fea8ddf93e629e8}\label{game_8c_ab6fe70cf55b50ced7fea8ddf93e629e8}} 
+\index{game.c@{game.c}!bytesPerPixel@{bytesPerPixel}}
+\index{bytesPerPixel@{bytesPerPixel}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{bytesPerPixel}{bytesPerPixel}}
+{\footnotesize\ttfamily unsigned bytes\+Per\+Pixel\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{game_8c_aca42f7778287b9a79affe540ce98d0f5}\label{game_8c_aca42f7778287b9a79affe540ce98d0f5}} 
+\index{game.c@{game.c}!frame\_buffer@{frame\_buffer}}
+\index{frame\_buffer@{frame\_buffer}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{frame\_buffer}{frame\_buffer}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ frame\+\_\+buffer\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{game_8c_aa535a3201e6b21c12dc05f4fa9a3e7c2}\label{game_8c_aa535a3201e6b21c12dc05f4fa9a3e7c2}} 
+\index{game.c@{game.c}!gameMode@{gameMode}}
+\index{gameMode@{gameMode}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{gameMode}{gameMode}}
+{\footnotesize\ttfamily int game\+Mode\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Mini\+X-\/\+Golf. 
+
+\begin{DoxyAuthor}{Author}
+João Pedro Sousa, Bernardo Pinto, Carlos Madaleno
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/05/2023 
+\end{DoxyDate}
+\mbox{\Hypertarget{game_8c_a81c9f8d0b8c3b49d770be14dbe9f0d37}\label{game_8c_a81c9f8d0b8c3b49d770be14dbe9f0d37}} 
+\index{game.c@{game.c}!height@{height}}
+\index{height@{height}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily uint16\+\_\+t height\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{game_8c_a9fcc2243068f8e628648febc0909c509}\label{game_8c_a9fcc2243068f8e628648febc0909c509}} 
+\index{game.c@{game.c}!mode\_info@{mode\_info}}
+\index{mode\_info@{mode\_info}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{mode\_info}{mode\_info}}
+{\footnotesize\ttfamily vbe\+\_\+mode\+\_\+info\+\_\+t mode\+\_\+info\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{game_8c_afa9fd6de06e462f1ae78b4862e69fe69}\label{game_8c_afa9fd6de06e462f1ae78b4862e69fe69}} 
+\index{game.c@{game.c}!sprites@{sprites}}
+\index{sprites@{sprites}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{sprites}{sprites}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ sprites\mbox{[}\mbox{\hyperlink{sprites_8h_aeb21c7ac080eea985b7701df626d9cf4}{MAX\+\_\+\+SPRITES}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{game_8c_ad0eab1042455a2067c812ab8071d5376}\label{game_8c_ad0eab1042455a2067c812ab8071d5376}} 
+\index{game.c@{game.c}!width@{width}}
+\index{width@{width}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily uint16\+\_\+t width\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{game_8c_a6150e0515f7202e2fb518f7206ed97dc}\label{game_8c_a6150e0515f7202e2fb518f7206ed97dc}} 
+\index{game.c@{game.c}!x@{x}}
+\index{x@{x}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily int x\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{game_8c_a0a2f84ed7838f07779ae24c5a9086d33}\label{game_8c_a0a2f84ed7838f07779ae24c5a9086d33}} 
+\index{game.c@{game.c}!y@{y}}
+\index{y@{y}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily int y\hspace{0.3cm}{\ttfamily [extern]}}
+

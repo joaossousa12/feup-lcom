@@ -1,0 +1,89 @@
+\hypertarget{instructions_8c}{}\doxysection{instructions.\+c File Reference}
+\label{instructions_8c}\index{instructions.c@{instructions.c}}
+{\ttfamily \#include \char`\"{}instructions.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{instructions_8c_a2f13724cd881207e201643aa03edc57b}{draw\+Instructions\+Page}} ()
+\begin{DoxyCompactList}\small\item\em Draws the instructions menu on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{instructions_8c_ad283913708f92e092210e9aa94231a6b}{process\+\_\+keyboard\+\_\+instructions}} (uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_aa1de7a5557e9d96b83cf03f73c92163f}{scancode}})
+\begin{DoxyCompactList}\small\item\em Processes keyboard input from the user and changes view based on it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{instructions_8c_aa535a3201e6b21c12dc05f4fa9a3e7c2}{game\+Mode}}
+\begin{DoxyCompactList}\small\item\em Mini\+X-\/\+Golf. \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{instructions_8c_aca42f7778287b9a79affe540ce98d0f5}{frame\+\_\+buffer}}
+\item 
+vbe\+\_\+mode\+\_\+info\+\_\+t \mbox{\hyperlink{instructions_8c_a9fcc2243068f8e628648febc0909c509}{mode\+\_\+info}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{instructions_8c_afa9fd6de06e462f1ae78b4862e69fe69}{sprites}} \mbox{[}\mbox{\hyperlink{sprites_8h_aeb21c7ac080eea985b7701df626d9cf4}{MAX\+\_\+\+SPRITES}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{instructions_8c_a2f13724cd881207e201643aa03edc57b}\label{instructions_8c_a2f13724cd881207e201643aa03edc57b}} 
+\index{instructions.c@{instructions.c}!drawInstructionsPage@{drawInstructionsPage}}
+\index{drawInstructionsPage@{drawInstructionsPage}!instructions.c@{instructions.c}}
+\doxysubsubsection{\texorpdfstring{drawInstructionsPage()}{drawInstructionsPage()}}
+{\footnotesize\ttfamily int draw\+Instructions\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the instructions menu on the screen. 
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{instructions_8c_ad283913708f92e092210e9aa94231a6b}\label{instructions_8c_ad283913708f92e092210e9aa94231a6b}} 
+\index{instructions.c@{instructions.c}!process\_keyboard\_instructions@{process\_keyboard\_instructions}}
+\index{process\_keyboard\_instructions@{process\_keyboard\_instructions}!instructions.c@{instructions.c}}
+\doxysubsubsection{\texorpdfstring{process\_keyboard\_instructions()}{process\_keyboard\_instructions()}}
+{\footnotesize\ttfamily void process\+\_\+keyboard\+\_\+instructions (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scancode }\end{DoxyParamCaption})}
+
+
+
+Processes keyboard input from the user and changes view based on it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scancode} & represents the key pressed by the user \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{instructions_8c_aca42f7778287b9a79affe540ce98d0f5}\label{instructions_8c_aca42f7778287b9a79affe540ce98d0f5}} 
+\index{instructions.c@{instructions.c}!frame\_buffer@{frame\_buffer}}
+\index{frame\_buffer@{frame\_buffer}!instructions.c@{instructions.c}}
+\doxysubsubsection{\texorpdfstring{frame\_buffer}{frame\_buffer}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ frame\+\_\+buffer\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{instructions_8c_aa535a3201e6b21c12dc05f4fa9a3e7c2}\label{instructions_8c_aa535a3201e6b21c12dc05f4fa9a3e7c2}} 
+\index{instructions.c@{instructions.c}!gameMode@{gameMode}}
+\index{gameMode@{gameMode}!instructions.c@{instructions.c}}
+\doxysubsubsection{\texorpdfstring{gameMode}{gameMode}}
+{\footnotesize\ttfamily int game\+Mode\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Mini\+X-\/\+Golf. 
+
+\begin{DoxyAuthor}{Author}
+João Pedro Sousa, Bernardo Pinto, Carlos Madaleno
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/05/2023 
+\end{DoxyDate}
+\mbox{\Hypertarget{instructions_8c_a9fcc2243068f8e628648febc0909c509}\label{instructions_8c_a9fcc2243068f8e628648febc0909c509}} 
+\index{instructions.c@{instructions.c}!mode\_info@{mode\_info}}
+\index{mode\_info@{mode\_info}!instructions.c@{instructions.c}}
+\doxysubsubsection{\texorpdfstring{mode\_info}{mode\_info}}
+{\footnotesize\ttfamily vbe\+\_\+mode\+\_\+info\+\_\+t mode\+\_\+info\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{instructions_8c_afa9fd6de06e462f1ae78b4862e69fe69}\label{instructions_8c_afa9fd6de06e462f1ae78b4862e69fe69}} 
+\index{instructions.c@{instructions.c}!sprites@{sprites}}
+\index{sprites@{sprites}!instructions.c@{instructions.c}}
+\doxysubsubsection{\texorpdfstring{sprites}{sprites}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ sprites\mbox{[}\mbox{\hyperlink{sprites_8h_aeb21c7ac080eea985b7701df626d9cf4}{MAX\+\_\+\+SPRITES}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+

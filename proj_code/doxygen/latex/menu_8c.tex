@@ -1,0 +1,113 @@
+\hypertarget{menu_8c}{}\doxysection{menu.\+c File Reference}
+\label{menu_8c}\index{menu.c@{menu.c}}
+{\ttfamily \#include \char`\"{}menu.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{menu_8c_a252c3e287edc6236251be9dd8517334c}{draw\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Draws the main menu on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a8b51b87762e5b4c1b07d7b2a7833e5fd}{process\+\_\+keyboard\+\_\+menu}} (uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_aa1de7a5557e9d96b83cf03f73c92163f}{scancode}})
+\begin{DoxyCompactList}\small\item\em Processes keyboard input from the user and changes view based on it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{menu_8c_aa535a3201e6b21c12dc05f4fa9a3e7c2}{game\+Mode}}
+\begin{DoxyCompactList}\small\item\em Mini\+X-\/\+Golf. \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{menu_8c_aca42f7778287b9a79affe540ce98d0f5}{frame\+\_\+buffer}}
+\item 
+vbe\+\_\+mode\+\_\+info\+\_\+t \mbox{\hyperlink{menu_8c_a9fcc2243068f8e628648febc0909c509}{mode\+\_\+info}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{menu_8c_ad0eab1042455a2067c812ab8071d5376}{width}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{menu_8c_a81c9f8d0b8c3b49d770be14dbe9f0d37}{height}}
+\item 
+unsigned \mbox{\hyperlink{menu_8c_ab6fe70cf55b50ced7fea8ddf93e629e8}{bytes\+Per\+Pixel}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{menu_8c_afa9fd6de06e462f1ae78b4862e69fe69}{sprites}} \mbox{[}\mbox{\hyperlink{sprites_8h_aeb21c7ac080eea985b7701df626d9cf4}{MAX\+\_\+\+SPRITES}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{menu_8c_a252c3e287edc6236251be9dd8517334c}\label{menu_8c_a252c3e287edc6236251be9dd8517334c}} 
+\index{menu.c@{menu.c}!drawMenu@{drawMenu}}
+\index{drawMenu@{drawMenu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{drawMenu()}{drawMenu()}}
+{\footnotesize\ttfamily int draw\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the main menu on the screen. 
+
+\begin{DoxyReturn}{Returns}
+0 on success, 1 if there was an error drawing the menu. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{menu_8c_a8b51b87762e5b4c1b07d7b2a7833e5fd}\label{menu_8c_a8b51b87762e5b4c1b07d7b2a7833e5fd}} 
+\index{menu.c@{menu.c}!process\_keyboard\_menu@{process\_keyboard\_menu}}
+\index{process\_keyboard\_menu@{process\_keyboard\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{process\_keyboard\_menu()}{process\_keyboard\_menu()}}
+{\footnotesize\ttfamily void process\+\_\+keyboard\+\_\+menu (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scancode }\end{DoxyParamCaption})}
+
+
+
+Processes keyboard input from the user and changes view based on it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scancode} & represents the key pressed by the user \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{menu_8c_ab6fe70cf55b50ced7fea8ddf93e629e8}\label{menu_8c_ab6fe70cf55b50ced7fea8ddf93e629e8}} 
+\index{menu.c@{menu.c}!bytesPerPixel@{bytesPerPixel}}
+\index{bytesPerPixel@{bytesPerPixel}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{bytesPerPixel}{bytesPerPixel}}
+{\footnotesize\ttfamily unsigned bytes\+Per\+Pixel\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{menu_8c_aca42f7778287b9a79affe540ce98d0f5}\label{menu_8c_aca42f7778287b9a79affe540ce98d0f5}} 
+\index{menu.c@{menu.c}!frame\_buffer@{frame\_buffer}}
+\index{frame\_buffer@{frame\_buffer}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{frame\_buffer}{frame\_buffer}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ frame\+\_\+buffer\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{menu_8c_aa535a3201e6b21c12dc05f4fa9a3e7c2}\label{menu_8c_aa535a3201e6b21c12dc05f4fa9a3e7c2}} 
+\index{menu.c@{menu.c}!gameMode@{gameMode}}
+\index{gameMode@{gameMode}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{gameMode}{gameMode}}
+{\footnotesize\ttfamily int game\+Mode\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Mini\+X-\/\+Golf. 
+
+\begin{DoxyAuthor}{Author}
+João Pedro Sousa, Bernardo Pinto, Carlos Madaleno
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/05/2023 
+\end{DoxyDate}
+\mbox{\Hypertarget{menu_8c_a81c9f8d0b8c3b49d770be14dbe9f0d37}\label{menu_8c_a81c9f8d0b8c3b49d770be14dbe9f0d37}} 
+\index{menu.c@{menu.c}!height@{height}}
+\index{height@{height}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily uint16\+\_\+t height}
+
+\mbox{\Hypertarget{menu_8c_a9fcc2243068f8e628648febc0909c509}\label{menu_8c_a9fcc2243068f8e628648febc0909c509}} 
+\index{menu.c@{menu.c}!mode\_info@{mode\_info}}
+\index{mode\_info@{mode\_info}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{mode\_info}{mode\_info}}
+{\footnotesize\ttfamily vbe\+\_\+mode\+\_\+info\+\_\+t mode\+\_\+info\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{menu_8c_afa9fd6de06e462f1ae78b4862e69fe69}\label{menu_8c_afa9fd6de06e462f1ae78b4862e69fe69}} 
+\index{menu.c@{menu.c}!sprites@{sprites}}
+\index{sprites@{sprites}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{sprites}{sprites}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ sprites\mbox{[}\mbox{\hyperlink{sprites_8h_aeb21c7ac080eea985b7701df626d9cf4}{MAX\+\_\+\+SPRITES}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{menu_8c_ad0eab1042455a2067c812ab8071d5376}\label{menu_8c_ad0eab1042455a2067c812ab8071d5376}} 
+\index{menu.c@{menu.c}!width@{width}}
+\index{width@{width}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily uint16\+\_\+t width\hspace{0.3cm}{\ttfamily [extern]}}
+

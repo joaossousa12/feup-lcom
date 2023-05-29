@@ -1,7 +1,3 @@
-//
-// Created by Bernardo on 05/05/2023.
-//
-
 #ifndef VIDEO_VBE_H
 #define VIDEO_VBE_H
 

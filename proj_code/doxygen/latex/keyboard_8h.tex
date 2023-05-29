@@ -1,0 +1,70 @@
+\hypertarget{keyboard_8h}{}\doxysection{keyboard.\+h File Reference}
+\label{keyboard_8h}\index{keyboard.h@{keyboard.h}}
+{\ttfamily \#include $<$minix/sysutil.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}i8042.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}KBC.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{keyboard_8h_a4f3036dc383cb3264414c231f2ca11e4}{keyboard\+\_\+subscribe\+\_\+interrupts}} ()
+\begin{DoxyCompactList}\small\item\em Subscribes to keyboard interrupts. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{keyboard_8h_a97f07efdc4bf5955236db1b8f111daf6}{keyboard\+\_\+unsubscribe\+\_\+interrupts}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes keyboard interrupts. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{keyboard_8h_aea970a154161a35f6894898a092ed70a}{kbc\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Keyboard interrupt handler. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{keyboard_8h_a58017421d19bb2004825d339ebb600fa}{keyboard\+\_\+restore}} ()
+\begin{DoxyCompactList}\small\item\em Restores the keyboard\textquotesingle{}s interrupt configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{keyboard_8h_aea970a154161a35f6894898a092ed70a}\label{keyboard_8h_aea970a154161a35f6894898a092ed70a}} 
+\index{keyboard.h@{keyboard.h}!kbc\_ih@{kbc\_ih}}
+\index{kbc\_ih@{kbc\_ih}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{kbc\_ih()}{kbc\_ih()}}
+{\footnotesize\ttfamily void() kbc\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Keyboard interrupt handler. 
+
+\mbox{\Hypertarget{keyboard_8h_a58017421d19bb2004825d339ebb600fa}\label{keyboard_8h_a58017421d19bb2004825d339ebb600fa}} 
+\index{keyboard.h@{keyboard.h}!keyboard\_restore@{keyboard\_restore}}
+\index{keyboard\_restore@{keyboard\_restore}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_restore()}{keyboard\_restore()}}
+{\footnotesize\ttfamily int() keyboard\+\_\+restore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restores the keyboard\textquotesingle{}s interrupt configuration. 
+
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero if there was an error restoring the keyboard\textquotesingle{}s interrupt configuration. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{keyboard_8h_a4f3036dc383cb3264414c231f2ca11e4}\label{keyboard_8h_a4f3036dc383cb3264414c231f2ca11e4}} 
+\index{keyboard.h@{keyboard.h}!keyboard\_subscribe\_interrupts@{keyboard\_subscribe\_interrupts}}
+\index{keyboard\_subscribe\_interrupts@{keyboard\_subscribe\_interrupts}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_subscribe\_interrupts()}{keyboard\_subscribe\_interrupts()}}
+{\footnotesize\ttfamily int() keyboard\+\_\+subscribe\+\_\+interrupts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Subscribes to keyboard interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Returns the return value of sys\+\_\+irqsetpolicy(). On success, it returns the bitmask representing the subscribed IRQ line. On failure, it returns a negative value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{keyboard_8h_a97f07efdc4bf5955236db1b8f111daf6}\label{keyboard_8h_a97f07efdc4bf5955236db1b8f111daf6}} 
+\index{keyboard.h@{keyboard.h}!keyboard\_unsubscribe\_interrupts@{keyboard\_unsubscribe\_interrupts}}
+\index{keyboard\_unsubscribe\_interrupts@{keyboard\_unsubscribe\_interrupts}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_unsubscribe\_interrupts()}{keyboard\_unsubscribe\_interrupts()}}
+{\footnotesize\ttfamily int() keyboard\+\_\+unsubscribe\+\_\+interrupts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes keyboard interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, non-\/zero if there was an error unsubscribing the interrupts. 
+\end{DoxyReturn}

@@ -1,0 +1,129 @@
+\hypertarget{main_8c}{}\doxysection{main.\+c File Reference}
+\label{main_8c}\index{main.c@{main.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}devices/timer/timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}devices/keyboard/keyboard.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}devices/mouse/mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}MACROS.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game/menu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game/instructions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game/game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sprites/sprites.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{main_8c_af397c014b1ca8ac21809c7b1262fbe81}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+int \mbox{\hyperlink{main_8c_ad2de2228f5e3c23a3a18a4787b21aac0}{before\+Loop}} ()
+\item 
+int \mbox{\hyperlink{main_8c_a1aa02027d0ad2c777d4eb7a2f67ba75a}{after\+Loop}} ()
+\item 
+int() \mbox{\hyperlink{main_8c_a2a16f651eccbd248e1ad3b3b924b143b}{proj\+\_\+main\+\_\+loop}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_aa535a3201e6b21c12dc05f4fa9a3e7c2}{game\+Mode}} = \mbox{\hyperlink{_m_a_c_r_o_s_8h_a8d4df256934ba513fa2236499d98eae1}{MENU\+\_\+\+MODE}}
+\begin{DoxyCompactList}\small\item\em Mini\+X-\/\+Golf. \end{DoxyCompactList}\item 
+vbe\+\_\+mode\+\_\+info\+\_\+t \mbox{\hyperlink{main_8c_a9fcc2243068f8e628648febc0909c509}{mode\+\_\+info}}
+\item 
+int \mbox{\hyperlink{main_8c_a6150e0515f7202e2fb518f7206ed97dc}{x}}
+\item 
+int \mbox{\hyperlink{main_8c_a0a2f84ed7838f07779ae24c5a9086d33}{y}}
+\item 
+struct packet \mbox{\hyperlink{main_8c_a3b2e64ffb96c650d6525c99be01c7331}{mouse\+\_\+packet}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_a89fe01e2d4cf73b27993d65029aff235}{bytes}} \mbox{[}3\mbox{]}
+\item 
+int \mbox{\hyperlink{main_8c_aa109b69c74e781d1c99d60b2861cbf5d}{current\+\_\+index}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_aa1de7a5557e9d96b83cf03f73c92163f}{scancode}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a1aa02027d0ad2c777d4eb7a2f67ba75a}\label{main_8c_a1aa02027d0ad2c777d4eb7a2f67ba75a}} 
+\index{main.c@{main.c}!afterLoop@{afterLoop}}
+\index{afterLoop@{afterLoop}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{afterLoop()}{afterLoop()}}
+{\footnotesize\ttfamily int after\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_ad2de2228f5e3c23a3a18a4787b21aac0}\label{main_8c_ad2de2228f5e3c23a3a18a4787b21aac0}} 
+\index{main.c@{main.c}!beforeLoop@{beforeLoop}}
+\index{beforeLoop@{beforeLoop}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{beforeLoop()}{beforeLoop()}}
+{\footnotesize\ttfamily int before\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_af397c014b1ca8ac21809c7b1262fbe81}\label{main_8c_af397c014b1ca8ac21809c7b1262fbe81}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int() main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_a2a16f651eccbd248e1ad3b3b924b143b}\label{main_8c_a2a16f651eccbd248e1ad3b3b924b143b}} 
+\index{main.c@{main.c}!proj\_main\_loop@{proj\_main\_loop}}
+\index{proj\_main\_loop@{proj\_main\_loop}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{proj\_main\_loop()}{proj\_main\_loop()}}
+{\footnotesize\ttfamily int() proj\+\_\+main\+\_\+loop (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_a89fe01e2d4cf73b27993d65029aff235}\label{main_8c_a89fe01e2d4cf73b27993d65029aff235}} 
+\index{main.c@{main.c}!bytes@{bytes}}
+\index{bytes@{bytes}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{bytes}{bytes}}
+{\footnotesize\ttfamily uint8\+\_\+t bytes\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{main_8c_aa109b69c74e781d1c99d60b2861cbf5d}\label{main_8c_aa109b69c74e781d1c99d60b2861cbf5d}} 
+\index{main.c@{main.c}!current\_index@{current\_index}}
+\index{current\_index@{current\_index}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{current\_index}{current\_index}}
+{\footnotesize\ttfamily int current\+\_\+index\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{main_8c_aa535a3201e6b21c12dc05f4fa9a3e7c2}\label{main_8c_aa535a3201e6b21c12dc05f4fa9a3e7c2}} 
+\index{main.c@{main.c}!gameMode@{gameMode}}
+\index{gameMode@{gameMode}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{gameMode}{gameMode}}
+{\footnotesize\ttfamily int game\+Mode = \mbox{\hyperlink{_m_a_c_r_o_s_8h_a8d4df256934ba513fa2236499d98eae1}{MENU\+\_\+\+MODE}}}
+
+
+
+Mini\+X-\/\+Golf. 
+
+\begin{DoxyAuthor}{Author}
+João Pedro Sousa, Bernardo Pinto, Carlos Madaleno
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/05/2023 
+\end{DoxyDate}
+\mbox{\Hypertarget{main_8c_a9fcc2243068f8e628648febc0909c509}\label{main_8c_a9fcc2243068f8e628648febc0909c509}} 
+\index{main.c@{main.c}!mode\_info@{mode\_info}}
+\index{mode\_info@{mode\_info}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{mode\_info}{mode\_info}}
+{\footnotesize\ttfamily vbe\+\_\+mode\+\_\+info\+\_\+t mode\+\_\+info\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{main_8c_a3b2e64ffb96c650d6525c99be01c7331}\label{main_8c_a3b2e64ffb96c650d6525c99be01c7331}} 
+\index{main.c@{main.c}!mouse\_packet@{mouse\_packet}}
+\index{mouse\_packet@{mouse\_packet}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_packet}{mouse\_packet}}
+{\footnotesize\ttfamily struct packet mouse\+\_\+packet\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{main_8c_aa1de7a5557e9d96b83cf03f73c92163f}\label{main_8c_aa1de7a5557e9d96b83cf03f73c92163f}} 
+\index{main.c@{main.c}!scancode@{scancode}}
+\index{scancode@{scancode}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{scancode}{scancode}}
+{\footnotesize\ttfamily uint8\+\_\+t scancode\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{main_8c_a6150e0515f7202e2fb518f7206ed97dc}\label{main_8c_a6150e0515f7202e2fb518f7206ed97dc}} 
+\index{main.c@{main.c}!x@{x}}
+\index{x@{x}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily int x\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{main_8c_a0a2f84ed7838f07779ae24c5a9086d33}\label{main_8c_a0a2f84ed7838f07779ae24c5a9086d33}} 
+\index{main.c@{main.c}!y@{y}}
+\index{y@{y}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily int y\hspace{0.3cm}{\ttfamily [extern]}}
+
